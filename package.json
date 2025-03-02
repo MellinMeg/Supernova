@@ -6,9 +6,12 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "create:component": "node src/scripts/createComponent.js"
   },
   "dependencies": {
-    "astro": "^5.4.1"
+    "astro": "^5.3.0",
+    "gsap": "^3.12.7",
+    "sass": "^1.85.0"
   }
 }

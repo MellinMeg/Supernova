@@ -1,0 +1,15 @@
+---
+import "./Footer.scss";
+import type { FooterProps } from "./Footer.ts";
+
+export interface Props extends FooterProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="Footer">
+  <h1>{props.title}</h1>
+  <slot />
+</div>
+
+<script src="./Footer.client.ts"></script>

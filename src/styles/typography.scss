@@ -1,0 +1,87 @@
+p {
+  margin: revert;
+  font-size: var(--fs-body);
+  line-height: var(--lh-400);
+}
+
+.Heading1,
+.Heading2,
+.Heading3,
+.Heading4,
+.Heading5,
+.Heading6,
+.Heading404 {
+  line-height: var(--lh-400);
+  font-weight: var(--fw-700);
+  font-family: var(--ff-heading);
+}
+
+.Heading1 {
+  font-size: var(--fs-heading-1);
+}
+
+.Heading2 {
+  font-size: var(--fs-heading-2);
+}
+
+.Heading3 {
+  font-size: var(--fs-heading-3);
+}
+
+.Heading4 {
+  font-size: var(--fs-heading-4);
+}
+
+.Heading5 {
+  font-size: var(--fs-heading-5);
+}
+
+.Heading6 {
+  font-size: var(--fs-heading-6);
+}
+
+.Heading404 {
+  font-size: var(--fs-heading-404);
+  line-height: 1;
+}
+
+.Subheading {
+  font-family: var(--ff-heading);
+  line-height: var(--lh-400);
+}
+
+.Subheading1 {
+  font-size: var(--fs-subheading-1);
+}
+
+.Subheading2 {
+  font-size: var(--fs-subheading-2);
+}
+
+.Subheading3 {
+  font-size: var(--fs-subheading-3);
+}
+
+.Subheading4 {
+  font-size: var(--fs-subheading-4);
+}
+
+.Body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-300);
+}
+
+.BodySmall {
+  font-size: var(--fs-body-small);
+}
+
+.BodyXSmall {
+  font-size: var(--fs-body-xsmall);
+}
+
+@font-face {
+  font-family: "Giaza";
+  src: url("../styles/fonts/Giaza.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

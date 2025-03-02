@@ -1,0 +1,30 @@
+.Logo {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-logo);
+
+  &__Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+
+  &__Name {
+    height: auto;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      background-color: var(--clr-yellow);
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 45%;
+      transform: translate(0%, -50%);
+      z-index: -1;
+    }
+  }
+}

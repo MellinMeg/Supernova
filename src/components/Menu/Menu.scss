@@ -1,0 +1,21 @@
+.Menu {
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    li {
+      list-style: none;
+
+      a {
+        width: 100%;
+        font-size: var(--fs-body-xsmall);
+        display: block;
+        line-height: var(--lh-300);
+        background-color: var(--clr-yellow);
+        padding: 0.25rem 1rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+}

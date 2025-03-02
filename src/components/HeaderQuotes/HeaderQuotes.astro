@@ -1,0 +1,31 @@
+---
+import "./HeaderQuotes.scss";
+import type { HeaderQuotesProps } from "./HeaderQuotes.ts";
+
+export interface Props extends HeaderQuotesProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="HeaderQuotes"> 
+  <div class="HeaderQuotes__Wrapper">
+    <div class="HeaderQuotes__Quote"> 
+      La bellezza salverà il mondo<br>
+      L’idiota, Fedor Dostoyesky  
+    </div>
+    <div class="HeaderQuotes__Quote"> 
+      E hai soffiato dentro al mio cuore,<br>
+      a forma di armonica,<br>
+      hai seminato vento e raccolto energia eolica<br>
+      Tetris, PTN
+    </div>
+    <div class="HeaderQuotes__Quote"> 
+      Ma se accettiamo il gioco<br>
+      ai margini troviamo<br>
+      un segno intellegibile che può dar senso al tutto<br>
+      Incontro, Montale
+    </div>
+  </div>
+</div>
+
+<script src="./HeaderQuotes.client.ts"></script>

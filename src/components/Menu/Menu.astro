@@ -1,0 +1,19 @@
+---
+import "./Menu.scss";
+import type { MenuProps } from "./Menu.ts";
+
+export interface Props extends MenuProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="Menu">
+  <nav>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </nav>
+</div>
+
+<script src="./Menu.client.ts"></script>

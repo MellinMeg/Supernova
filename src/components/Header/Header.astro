@@ -1,0 +1,21 @@
+---
+import HeaderQuotes from "../HeaderQuotes/HeaderQuotes.astro";
+import Logo from "../Logo/Logo.astro";
+import Menu from "../Menu/Menu.astro";
+import "./Header.scss";
+import type { HeaderProps } from "./Header.ts";
+import { setupHeader } from "./Header.ts";
+setupHeader();
+
+const props: HeaderProps = Astro.props;
+---
+
+<div class="Header">
+  <Logo />
+  <Menu /> 
+  <HeaderQuotes /> 
+  <!-- socials -->
+  <slot />
+</div>
+
+<script src="./header.client.ts"></script>

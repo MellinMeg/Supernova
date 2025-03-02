@@ -1,0 +1,26 @@
+---
+import "../styles/app.scss";
+import Header from "../components/Header/Header.astro";
+import Footer from "../components/Footer/Footer.astro";
+---
+
+<!doctype html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>Meg Supernova</title>
+	</head>
+	<body>
+		<Header title="Titolo header" client:load/>
+		<main>
+			<slot />
+		</main>
+		<Footer title="Footer" client:load/>
+	</body>
+</html>
