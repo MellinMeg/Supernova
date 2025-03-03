@@ -1,4 +1,6 @@
 ---
+import FooterMenu from "../FooterMenu/FooterMenu.astro";
+import Heading from "../Heading/Heading.astro";
 import "./Footer.scss";
 import type { FooterProps } from "./Footer.ts";
 
@@ -8,8 +10,31 @@ const props: Props = Astro.props;
 ---
 
 <div class="Footer">
-  <h1>{props.title}</h1>
-  <slot />
+  <div class="Footer__Wrapper">
+    <div class="Footer__Top">
+      <div>
+        <Heading tag="h5">Explore</Heading>
+        
+        <FooterMenu /> 
+      </div>
+      <div>
+        Email
+        <a href="mailto:gregoriferrimargherita@gmail.com" class="Footer__Mail">gregoriferrimargherita@gmail.com</a>
+      </div>
+    </div>
+    <div class="Footer__Title">Get in touch</div>
+    <div class="Footer__Bottom">
+      <div class="Footer__Copyright">Copyright Margherita Gregori Ferri 2025</div>
+      <div class="Footer__Socials">
+        Follow me
+        <div>
+          <a href="https://www.instagram.com/meg_supernova" target="_blank" class="Footer__SocialLink">Instagram</a>
+          <a href="https://www.linkedin.com/in/margherita-gregori-ferri-55382752/" target="_blank" class="Footer__SocialLink">Linkedin</a>
+          <a href="https://codepen.io/MegSupernova/" target="_blank" class="Footer__SocialLink">Codpen</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="./Footer.client.ts"></script>

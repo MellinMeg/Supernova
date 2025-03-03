@@ -1,0 +1,18 @@
+---
+import "./FooterMenu.scss";
+import type { FooterMenuProps } from "./FooterMenu.ts";
+
+export interface Props extends FooterMenuProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="FooterMenu">  
+  <nav>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </nav> 
+</div>
+
+<script src="./FooterMenu.client.ts"></script>

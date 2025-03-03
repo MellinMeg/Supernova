@@ -1,7 +1,8 @@
-.Menu {
+.FooterMenu {
   nav {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     gap: 1rem;
 
     li {
@@ -9,11 +10,12 @@
 
       a {
         width: 100%;
-        text-align: center;
         font-size: var(--fs-body-xsmall);
         display: block;
+        text-align: center;
         line-height: var(--lh-300);
         background-color: var(--clr-yellow);
+        color: var(--clr-black);
         padding: 0.25rem 1rem;
         border-radius: 1rem;
       }
