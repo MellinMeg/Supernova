@@ -2,19 +2,17 @@
 import "./Heading.scss";
 import type { HeadingProps } from "./Heading.ts";
 
-export interface Props extends HeadingProps {
-  tag: string;
-  context?: string;
-  slot?: any;
+interface Props extends HeadingProps {
+  class?: string;
+  tag?: string;
 }
 
-const { tag, context, slot } = Astro.props;
+const { tag: Tag, ...attributes } = Astro.props;
 
-const classList = [ "Heading", context ? `Heading--${context}` : "",].filter(Boolean).join(" ");
 ---
 
-<div class="Heading" is={tag} class={classList}>
-  {slot}
-</div>
+<Tag class={`Heading ${attributes.class ?? ""}`}>
+  <slot />
+</Tag>
 
 <script src="./Heading.client.ts"></script>

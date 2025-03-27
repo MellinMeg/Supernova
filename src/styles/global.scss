@@ -1,3 +1,5 @@
+@import "../styles/animations.scss";
+
 :root {
   --clr-red: #fd6841;
   --clr-blue: #19c1e5;
@@ -35,6 +37,7 @@
   --fs-900: 4.5rem; // 72px
   --fs-950: 7rem; // 80px
   --fs-1000: 6rem; // 96px
+  --fs-1100: 6rem; // 96px
   --lh-300: 1;
   --lh-400: 1.2;
   --lh-500: 1.4;
@@ -50,24 +53,69 @@
   --fw-900: 900;
   // --ff-primary: "Rozha One", serif;
   --ff-primary: "Giaza", serif;
-  --ff-secondary: "Abel", serif;
-  --ff-body: var(--ff-secondary);
-  --ff-heading: var(--ff-primary);
+  --ff-secondary: "Boldonse", serif;
+  // --ff-tertiary: "Abel", serif;
+  --ff-tertiary: "MuseoModerno", serif;
+  --ff-body: var(--ff-tertiary);
+  --ff-heading: var(--ff-secondary);
 
   // Font size
-  --fs-heading-404: clamp(var(--fs-950), 25vw, var(--fs-1000));
-  --fs-heading-1: clamp(var(--fs-700), 4vw, var(--fs-900));
-  --fs-heading-2: clamp(var(--fs-670), 4vw, var(--fs-800));
-  --fs-heading-3: clamp(var(--fs-550), 4vw, var(--fs-700));
-  --fs-heading-4: clamp(var(--fs-300), 4vw, var(--fs-400));
-  --fs-heading-5: clamp(var(--fs-200), 4vw, var(--fs-300));
-  --fs-subheading-1: clamp(var(--fs-550), 4vw, var(--fs-700));
-  --fs-subheading-2: clamp(var(--fs-500), 4vw, var(--fs-650));
-  --fs-subheading-3: clamp(var(--fs-450), 4vw, var(--fs-550));
-  --fs-body: clamp(var(--fs-400), 4vw, var(--fs-450));
-  --fs-body-small: clamp(var(--fs-300), 4vw, var(--fs-400));
-  --fs-body-xsmall: clamp(var(--fs-200), 4vw, var(--fs-300));
-  --fs-logo: var(--fs-600);
+  --fs-title-footer: clamp(var(--fs-450), 22vw, var(--fs-1100)); // 18 a 96px
+  --fs-heading-herohome: clamp(
+    var(--fs-450),
+    25vw,
+    var(--fs-1100)
+  ); // 18 a 96px
+  --fs-heading-404: clamp(var(--fs-950), 25vw, var(--fs-1100)); // 80 a 96px
+  --fs-heading-1: clamp(
+    var(--fs-700),
+    calc(5vw + 1rem),
+    var(--fs-1000)
+  ); // 48 - 96
+  --fs-heading-2: clamp(
+    var(--fs-680),
+    calc(4.5vw + 1rem),
+    var(--fs-900)
+  ); // 40 - 72
+  --fs-heading-3: clamp(
+    var(--fs-620),
+    calc(4vw + 1rem),
+    var(--fs-800)
+  ); // 32 - 64
+  --fs-heading-4: clamp(
+    var(--fs-550),
+    calc(3.5vw + 1rem),
+    var(--fs-700)
+  ); // 24 - 48
+  --fs-heading-5: clamp(
+    var(--fs-500),
+    calc(2vw + 1rem),
+    var(--fs-620)
+  ); // 20 - 32
+  --fs-heading-6: clamp(
+    var(--fs-150),
+    calc(2vw + 1rem),
+    var(--fs-200)
+  ); // 10 - 16
+  --fs-subheading-1: clamp(
+    var(--fs-620),
+    calc(4vw + 1rem),
+    var(--fs-700)
+  ); // 32 - 48
+  --fs-subheading-2: clamp(
+    var(--fs-550),
+    calc(3.5vw + 1rem),
+    var(--fs-620)
+  ); // 24 - 32
+  --fs-subheading-3: clamp(
+    var(--fs-450),
+    calc(3vw + 1rem),
+    var(--fs-550)
+  ); // 18 - 24
+  --fs-body: clamp(var(--fs-400), calc(2vw + 0.5rem), var(--fs-450)); // 16 - 18
+  --fs-body-small: clamp(var(--fs-300), 4vw, var(--fs-400)); // 14 - 16
+  --fs-body-xsmall: clamp(var(--fs-200), 4vw, var(--fs-300)); // 12 - 14
+  --fs-body-extra-small: var(--fs-200); // 12
 
   // Font Weight
   --fw-thin: 100;
@@ -99,7 +147,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 4.5rem;
   font-family: var(--ff-body);
-  font-weight: var(--fw-500);
+  font-weight: var(--fw-300);
   scrollbar-width: none;
 
   // --origin-x: calc(var(--click-x, 0.5) * 100%);

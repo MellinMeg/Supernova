@@ -12,13 +12,15 @@ import Footer from "../components/Footer/Footer.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Abel&family=Boldonse&display=swap" rel="stylesheet"> -->
+		<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>Meg Supernova</title>
 	</head>
 	<body>
 		<Header title="Titolo header" client:load/>
 		<main>
+			<div style="height: 100vh; background: yellow"></div>
 			<slot />
 		</main>
 		<Footer title="Footer" client:load/>

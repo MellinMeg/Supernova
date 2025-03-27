@@ -13,25 +13,41 @@ const props: Props = Astro.props;
   <div class="Footer__Wrapper">
     <div class="Footer__Top">
       <div>
-        <Heading tag="h5">Explore</Heading>
-        
-        <FooterMenu /> 
+        <Heading tag="h5" class="Heading6">Explore</Heading>
+        <FooterMenu>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </FooterMenu>
       </div>
       <div>
-        Email
+        <Heading tag="h5" class="Heading6">Email</Heading>
         <a href="mailto:gregoriferrimargherita@gmail.com" class="Footer__Mail">gregoriferrimargherita@gmail.com</a>
       </div>
     </div>
-    <div class="Footer__Title">Get in touch</div>
+    <Heading tag="h2" class="Heading--Footer Footer__Title">
+      <a href="mailto:gregoriferrimargherita@gmail.com">Get in touch</a>
+    </Heading>
     <div class="Footer__Bottom">
-      <div class="Footer__Copyright">Copyright Margherita Gregori Ferri 2025</div>
+      <div class="Footer__Copyright">
+        <Heading tag="h5" class="Heading6">Copyright</Heading> 
+        Margherita Gregori Ferri 2025</div>
       <div class="Footer__Socials">
-        Follow me
-        <div>
-          <a href="https://www.instagram.com/meg_supernova" target="_blank" class="Footer__SocialLink">Instagram</a>
-          <a href="https://www.linkedin.com/in/margherita-gregori-ferri-55382752/" target="_blank" class="Footer__SocialLink">Linkedin</a>
-          <a href="https://codepen.io/MegSupernova/" target="_blank" class="Footer__SocialLink">Codpen</a>
-        </div>
+        <Heading tag="h5" class="Heading6">Follow Me</Heading> 
+    
+        <FooterMenu>
+          <li> <a href="https://www.instagram.com/meg_supernova" target="_blank" class="Footer__SocialLink">Instagram</a></li>
+          <li> <a href="https://www.linkedin.com/in/margherita-gregori-ferri-55382752/" target="_blank" class="Footer__SocialLink">Linkedin</a> </li>
+          <li> <a href="https://codepen.io/MegSupernova/" target="_blank" class="Footer__SocialLink">Codpen</a></li>
+        </FooterMenu>
+      </div>
+    </div>
+    <div class="Footer__Blobs">
+      <div class="Footer__Blob Footer__Blob--Yellow">
+        <!-- <div class="Footer__IntraBlob Footer__IntraBlob--Pink"></div> -->
+      </div>
+      <div class="Footer__Blob Footer__Blob--Yellow">
+        <!-- <div class="Footer__IntraBlob Footer__IntraBlob--Pink"></div> -->
       </div>
     </div>
   </div>

@@ -1,3 +1,9 @@
 .Heading {
-  font-weight: var(--fw-500);
+  &--Home {
+    font-size: var(--fs-heading-herohome);
+  }
+
+  &--Footer {
+    font-size: var(--fs-title-footer);
+  }
 }

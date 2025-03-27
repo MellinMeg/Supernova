@@ -4,6 +4,7 @@ p {
   line-height: var(--lh-400);
 }
 
+.Heading,
 .Heading1,
 .Heading2,
 .Heading3,
@@ -11,8 +12,8 @@ p {
 .Heading5,
 .Heading6,
 .Heading404 {
-  line-height: var(--lh-400);
-  font-weight: var(--fw-700);
+  line-height: var(--lh-500);
+  font-weight: var(--fw-300);
   font-family: var(--ff-heading);
 }
 
@@ -64,11 +65,6 @@ p {
 
 .Subheading4 {
   font-size: var(--fs-subheading-4);
-}
-
-.Body {
-  font-size: var(--fs-body);
-  line-height: var(--lh-300);
 }
 
 .BodySmall {

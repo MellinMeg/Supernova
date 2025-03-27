@@ -1,9 +1,23 @@
 .Header {
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // padding: 0.5rem 1rem;
+  // height: var(--header-height);
+  // margin: 1rem 0;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem var(--lateral-padding);
   height: var(--header-height);
+  margin: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0%);
+  width: 100%;
+  z-index: 100;
 
   & > * {
     flex: 0 1 33%;
@@ -11,5 +25,12 @@
 
   .HeaderQuotes {
     flex: 0 1 20%;
+  }
+
+  .Logo {
+  }
+
+  @media (min-width: 1024px) {
+    padding: 2rem var(--lateral-padding);
   }
 }
