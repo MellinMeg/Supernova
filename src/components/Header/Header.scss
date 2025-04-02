@@ -1,16 +1,8 @@
 .Header {
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
-  // padding: 0.5rem 1rem;
-  // height: var(--header-height);
-  // margin: 1rem 0;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem var(--lateral-padding);
-  height: var(--header-height);
   margin: 1rem 0;
   position: fixed;
   top: 0;
@@ -27,10 +19,15 @@
     flex: 0 1 20%;
   }
 
-  .Logo {
+  .Menu {
+    display: none;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     padding: 2rem var(--lateral-padding);
+
+    .Menu {
+      display: block;
+    }
   }
 }

@@ -1,0 +1,33 @@
+---
+import "./MenuMobile.scss";
+import type { MenuMobileProps } from "./MenuMobile.ts";
+
+export interface Props extends MenuMobileProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="MenuMobile">  
+  <button class="MenuMobile__Toggle" aria-label="Toggle menu">
+    <span class="MenuMobile__Hamburger"></span>
+    <span class="MenuMobile__Hamburger"></span>
+    <span class="MenuMobile__Hamburger"></span>
+  </button>
+
+  <nav class="MenuMobile__Nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about"> Me</a></li>
+      <li><a href="#projects"> Projects</a></li>
+      <li><a href="#contact"> Contact</a></li>
+    </ul>
+
+    <button class="MenuMobile__CloseButton" aria-label="Chiudi menu">
+      <span class="MenuMobile__CloseIcon"></span>
+    </button>
+  </nav>
+
+  
+</div>
+
+<script src="./MenuMobile.client.ts"></script> 

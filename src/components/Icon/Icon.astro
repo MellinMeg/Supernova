@@ -1,0 +1,14 @@
+---
+import "./Icon.scss";
+import type { IconProps } from "./Icon.ts";
+
+export interface Props extends IconProps {}
+
+const { variant = "base", className = "" } = Astro.props;
+
+const classes = `Icon Icon--${variant} ${className}`.trim();
+---
+
+<div class={classes}>
+  <slot />
+</div> 

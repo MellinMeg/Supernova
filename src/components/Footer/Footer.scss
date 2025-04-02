@@ -14,8 +14,8 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: calc(var(--vertical-padding) + var(--header-height))
-      var(--lateral-padding) var(--vertical-padding);
+    padding: calc(var(--vertical-padding) * 3) var(--lateral-padding)
+      var(--vertical-padding);
   }
 
   &__Top,
@@ -37,6 +37,7 @@
   a {
     position: relative;
     text-decoration: none;
+    width: fit-content;
 
     &:hover {
       color: var(--clr-yellow);
@@ -134,6 +135,11 @@
 
     &__Blob {
       filter: blur(100px);
+    }
+
+    &__Wrapper {
+      padding: calc(var(--header-height) + 4rem) var(--lateral-padding)
+        var(--vertical-padding);
     }
   }
 }
