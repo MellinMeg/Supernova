@@ -2,5 +2,12 @@
   nav {
     display: flex;
     gap: 1rem;
+
+    ul {
+      display: flex;
+      width: 100%;
+      gap: 1rem;
+      padding: 0;
+    }
   }
 }

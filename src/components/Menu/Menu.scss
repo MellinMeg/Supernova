@@ -2,18 +2,20 @@
   nav {
     display: flex;
     gap: 1rem;
+    
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0;
+    }
 
     li {
       list-style: none;
 
       a {
-        width: 100%;
-        text-align: center;
-        font-size: var(--fs-body-xsmall);
-        display: block;
-        line-height: var(--lh-300);
         background-color: var(--clr-yellow);
-        padding: 0.25rem 1rem;
+        padding: 0 1rem;
         border-radius: 1rem;
       }
     }

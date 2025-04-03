@@ -1,6 +1,7 @@
 ---
 import "./MenuMobile.scss";
 import type { MenuMobileProps } from "./MenuMobile.ts";
+import RunnerLink from "../RunnerLink/RunnerLink.astro";
 
 export interface Props extends MenuMobileProps {}
 
@@ -16,17 +17,24 @@ const props: Props = Astro.props;
 
   <nav class="MenuMobile__Nav">
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about"> Me</a></li>
-      <li><a href="#projects"> Projects</a></li>
-      <li><a href="#contact"> Contact</a></li>
+      <li>
+        <RunnerLink href="#home" up="Home" down="Home"></RunnerLink> 
+      </li>
+      <li>
+        <RunnerLink href="#about" up="Me" down="Me"></RunnerLink> 
+      </li>
+      <li>
+        <RunnerLink href="#projects" up="Projects" down="Projects"></RunnerLink>
+      </li>
+      <li>
+        <RunnerLink href="#contact" up="What's up?" down="Contact"></RunnerLink>
+      </li>
     </ul>
 
     <button class="MenuMobile__CloseButton" aria-label="Chiudi menu">
       <span class="MenuMobile__CloseIcon"></span>
     </button>
   </nav>
-
   
 </div>
 

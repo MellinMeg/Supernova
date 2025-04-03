@@ -1,6 +1,7 @@
 ---
 import "./Menu.scss";
 import type { MenuProps } from "./Menu.ts";
+import RunnerLink from "../RunnerLink/RunnerLink.astro";
 
 export interface Props extends MenuProps {}
 
@@ -9,10 +10,20 @@ const props: Props = Astro.props;
 
 <div class="Menu">
   <nav>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">Me</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <ul>
+      <li>
+        <RunnerLink href="#home" up="Home" down="Home"></RunnerLink> 
+      </li>
+      <li>
+        <RunnerLink href="#about" up="Me" down="Me"></RunnerLink> 
+      </li>
+      <li>
+        <RunnerLink href="#projects" up="Projects" down="Projects"></RunnerLink>
+      </li>
+      <li>
+        <RunnerLink href="#contact" up="What's up?" down="Contact"></RunnerLink>
+      </li>
+    </ul>
   </nav>
 </div>
 
