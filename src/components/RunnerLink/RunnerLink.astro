@@ -1,0 +1,21 @@
+---
+import "./RunnerLink.scss";
+import type { RunnerLinkProps } from "./RunnerLink.ts";
+
+export interface Props extends RunnerLinkProps {
+  href: string;
+  target?: string;
+  up?: string;
+  down?: string;
+  class?: string;
+}
+
+const { target= "_self", href, up, down, ...attributes } = Astro.props;
+---
+
+<a class={`RunnerLink ${attributes.class ?? ""}`} href={href} target={target}>
+  <span class="RunnerLink__Up">{up}</span> 
+  <span class="RunnerLink__Down">{down}</span>
+</a>
+
+<script src="./RunnerLink.client.ts"></script>

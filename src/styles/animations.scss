@@ -43,3 +43,15 @@
     transform: scaleX(1.2);
   }
 }
+
+@keyframes roller-link {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes roller-link-reverse {
+  0% {
+    transform: translateY(-70%);
+  }
+}

@@ -1,6 +1,7 @@
 ---
 import FooterMenu from "../FooterMenu/FooterMenu.astro";
 import Heading from "../Heading/Heading.astro";
+import RunnerLink from "../RunnerLink/RunnerLink.astro";
 import "./Footer.scss";
 import type { FooterProps } from "./Footer.ts";
 
@@ -15,17 +16,17 @@ const props: Props = Astro.props;
       <div>
         <Heading tag="h5" class="Heading6">Explore</Heading>
         <FooterMenu>
-          <li><a href="#about">Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <RunnerLink href="#about" up="Me" down="Me"></RunnerLink> 
+          <RunnerLink href="#projects" up="Projects" down="Projects"></RunnerLink> 
+          <RunnerLink href="#contact" up="What's up?" down="Contact"></RunnerLink> 
         </FooterMenu>
       </div>
       <div>
         <Heading tag="h5" class="Heading6">Email</Heading>
-        <a href="mailto:gregoriferrimargherita@gmail.com" class="Footer__Mail">gregoriferrimargherita@gmail.com</a>
+        <RunnerLink href="mailto:gregoriferrimargherita@gmail.com" up="gregoriferrimargherita@gmail.com" down="gregoriferrimargherita@gmail.com"></RunnerLink>
       </div>
     </div>
-    <Heading tag="h2" class="Heading--Footer Footer__Title">
+    <Heading tag="h2" class="Heading--Footer Footer__Title">      
       <a href="mailto:gregoriferrimargherita@gmail.com">Get in touch</a>
     </Heading>
     <div class="Footer__Bottom">
@@ -36,9 +37,9 @@ const props: Props = Astro.props;
         <Heading tag="h5" class="Heading6">Follow Me</Heading> 
     
         <FooterMenu>
-          <li> <a href="https://www.instagram.com/meg_supernova" target="_blank" class="Footer__SocialLink">Instagram</a></li>
-          <li> <a href="https://www.linkedin.com/in/margherita-gregori-ferri-55382752/" target="_blank" class="Footer__SocialLink">Linkedin</a> </li>
-          <li> <a href="https://codepen.io/MegSupernova/" target="_blank" class="Footer__SocialLink">Codpen</a></li>
+          <RunnerLink href="https://www.instagram.com/meg_supernova" target="_blank" up="Instagram" down="Instagram" class=""></RunnerLink> 
+          <RunnerLink href="hhttps://www.linkedin.com/in/margherita-gregori-ferri-55382752/" target="_blank" up="Linkedin" down="Linkedin"></RunnerLink>
+          <RunnerLink href="https://codepen.io/MegSupernova/" target="_blank" up="Codpen" down="Codpen"></RunnerLink>
         </FooterMenu>
       </div>
     </div>

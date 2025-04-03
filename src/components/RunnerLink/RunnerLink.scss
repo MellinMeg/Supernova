@@ -1,0 +1,38 @@
+.RunnerLink {
+    list-style: none;
+    display: inline-flex;
+    overflow: hidden;
+    padding: 0;
+    flex-direction: column;
+    height: 1.5rem;
+    position: relative;
+    min-width: max-content;
+    
+    &__Up, 
+    &__Down {
+        transition: transform 0.5s ease-in-out;
+        white-space: nowrap;
+    }
+
+    &__Up {
+        transform: translateY(0%);
+    }
+
+    &__Down {
+        transform: translateY(100%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    &:hover {
+        .RunnerLink__Up {
+            transform: translateY(-100%);
+        }
+
+        .RunnerLink__Down {
+            transform: translateY(0%);
+        }
+    }
+}
