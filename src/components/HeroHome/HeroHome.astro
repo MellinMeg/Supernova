@@ -1,0 +1,19 @@
+---
+import "./HeroHome.scss";
+import type { HeroHomeProps } from "./HeroHome.ts";
+
+export interface Props extends HeroHomeProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="HeroHome"> 
+  <div class="HeroHome__Blobs">
+    <div class="HeroHome__Blob Footer__Blob--Yellow">
+    </div>
+    <div class="HeroHome__Blob Footer__Blob--Yellow"> 
+    </div>
+  </div>
+</div>
+
+<script src="./HeroHome.client.ts"></script>

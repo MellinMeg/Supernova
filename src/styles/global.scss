@@ -9,6 +9,9 @@
   --clr-black: #140f18;
   --clr-white: #fff;
 
+  // clr-opacity 0.3
+  --clr-white-30: rgba(255, 255, 255, 0.3);
+
   // clr-opacity 0.6
   --clr-red-60: rgba(253, 104, 65, 0.6);
   --clr-blue-60: rgba(25, 193, 229, 0.6);
@@ -63,6 +66,7 @@
   // --ff-primary: "Rozha One", serif;
   --ff-primary: "Giaza", serif;
   --ff-secondary: "Boldonse", serif;
+  --ff-logo: "Melodrama", serif;
   // --ff-tertiary: "Abel", serif;
   --ff-tertiary: "MuseoModerno", serif;
   --ff-body: var(--ff-tertiary);
@@ -137,17 +141,19 @@
   --fw-black: 900;
 
   // Header
-  --header-height: 5rem;
+  --header-height: 5.75rem;
   --lateral-padding: 2rem;
-  --vertical-padding: 2rem;
+  --vertical-padding: clamp(1.25rem, 3.75rem, 3.75rem);
+
+  // Variables
+  --logo-color: var(--clr-black);
 
   @media (width >= 1024px) {
     --fs-heading-1: clamp(var(--fs-700), 4vw, var(--fs-900));
     --fs-heading-2: clamp(var(--fs-650), 4vw, var(--fs-800));
     --fs-heading-3: clamp(var(--fs-550), 4vw, var(--fs-700));
     --lateral-padding: 6rem;
-    --vertical-padding: 6rem;
-    --header-height: 8rem;
+    --header-height: 6.875rem;
   }
 }
 
@@ -164,13 +170,18 @@ html {
 }
 
 body {
+  overscroll-behavior: none;
   background-color: var(--clr-white);
   scroll-behavior: smooth;
+  position: relative;
   margin: 0;
 }
 
-main#main {
+main {
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+  background-color: var(--clr-white);
 }
 
 * {

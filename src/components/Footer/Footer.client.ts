@@ -7,7 +7,6 @@ export function setupClientFooter() {
   // Funzione per generare un punto casuale all'interno di un range
   const randomPoint = (min: number, max: number) => gsap.utils.random(min, max);
 
-
   // Funzione per generare una posizione casuale all'interno del footer
   const getRandomPosition = (blob: Element) => {
     const footerRect = footer.getBoundingClientRect();
@@ -35,7 +34,7 @@ export function setupClientFooter() {
     });
 
     const createFluidAnimation = () => {
-      const duration = gsap.utils.random(15, 20);
+      const duration = gsap.utils.random(5, 10);
       const newPos = getRandomPosition(blob);
       const currentElement = blob as HTMLElement;
       
