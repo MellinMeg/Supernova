@@ -1,10 +1,14 @@
 .RunnerLink {
+  --runner-link-height: var(--fs-400);
+  --runner-link-line-height: calc(var(--runner-link-height) * 1.5);
+
   list-style: none;
   display: inline-flex;
   overflow: hidden;
   padding: 0;
   flex-direction: column;
-  height: 1.5rem;
+  font-size: var(--runner-link-height);
+  height: var(--runner-link-line-height);
   position: relative;
   min-width: max-content;
   text-align: center;

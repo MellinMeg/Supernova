@@ -2,13 +2,14 @@
 import "./MobileNavigation.scss";
 import type { MobileNavigationProps } from "./MobileNavigation.ts";
 import RunnerLink from "../RunnerLink/RunnerLink.astro";
+import Button from "../Button/Button.astro";
 
 export interface Props extends MobileNavigationProps {}
 
 const props: Props = Astro.props;
 ---
 
-<nav class="MenuMobile__Nav">
+<nav class="MobileNavigation">
   <ul>
     <li>
       <RunnerLink href="#home" up="Home" down="Home"></RunnerLink> 
@@ -23,6 +24,8 @@ const props: Props = Astro.props;
       <RunnerLink href="#contact" up="What's up?" down="Contact"></RunnerLink>
     </li>
   </ul>
+
+  <Button href="mailto:gregoriferrimargherita@gmail.com" color="Yellow" showIcon={false}>Get in Touch</Button>
 </nav>
 
 <script src="./MobileNavigation.client.ts"></script>

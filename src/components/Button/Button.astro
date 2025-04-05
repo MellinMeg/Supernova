@@ -3,18 +3,28 @@ import "./Button.scss";
 import type { ButtonProps } from "./Button.ts";
 
 export interface Props extends ButtonProps {
-  class?: string;
+  className?: string;
   color?: string;
   href?: string;
-  target?: string; 
+  target?: string;
+  showIcon?: boolean; // nuova prop
 }
 
-const { color, target, href, ...attributes } = Astro.props;
+const { color, target, href, showIcon = true, ...attributes } = Astro.props;
 ---
 
-<a class={`Button ${color ? `Button--${color}` : ""} ${attributes.class ?? ""}`} href={href} target={target}> 
+<a
+  class={`Button ${color ? `Button--${color}` : ""} ${attributes.className ?? ""}`}
+  href={href}
+  target={target}
+  rel={target === "_blank" ? "noopener noreferrer" : undefined}
+> 
   <span><slot /></span>
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 93 29"><path stroke="#fff" d="M.86 15.57H91m0 0C85.675 13.598 72.83 7.84 73.15.583M91 15.57c-5.192 1.314-17.85 8.992-17.85 13.409"/></svg>
+  {showIcon && (
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 93 29">
+      <path stroke="#fff" d="M.86 15.57H91m0 0C85.675 13.598 72.83 7.84 73.15.583M91 15.57c-5.192 1.314-17.85 8.992-17.85 13.409"/>
+    </svg>
+  )}
 </a>
 
 <script src="./Button.client.ts"></script>
