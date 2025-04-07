@@ -3,15 +3,12 @@ import { gsap } from 'gsap';
 export function setupClientHeroHome() {
   const heroHome = document.querySelector('.HeroHome') as HTMLElement;
   const blobs = document.querySelectorAll('.HeroHome__Blob');
-
-  // Funzione per generare un punto casuale all'interno di un range
   const randomPoint = (min: number, max: number) => gsap.utils.random(min, max);
 
-  // Funzione per generare una posizione casuale all'interno del heroHome
   const getRandomPosition = (blob: Element) => {
     const heroHomeRect = heroHome.getBoundingClientRect();
     const blobElement = blob as HTMLElement;
-    const blobSize = window.innerWidth * 0.4; // 40vw come nel CSS
+    const blobSize = window.innerWidth * 0.4;
     
     // Calcoliamo i limiti sicuri per mantenere il blob sempre visibile
     // Lasciamo almeno 2/3 del blob sempre visibile
@@ -23,9 +20,7 @@ export function setupClientHeroHome() {
     };
   };
 
-  // Animazione fluida dei blob
   blobs.forEach((blob, index) => {
-    // Posizione iniziale casuale
     const initialPos = getRandomPosition(blob);
     gsap.set(blob, {
       x: initialPos.x,
@@ -62,7 +57,7 @@ export function setupClientHeroHome() {
         repeat: 1
       }, 0);
 
-      // Animazione continua della deformazione
+      // Animazione della deformazione e cambiamento dimensionale
       let progress = 0;
       gsap.to({}, {
         duration: duration,
@@ -74,7 +69,6 @@ export function setupClientHeroHome() {
       });
     };
 
-    // Delay iniziale diverso per ogni blob
     gsap.delayedCall(index * 2, createFluidAnimation);
   });
 
