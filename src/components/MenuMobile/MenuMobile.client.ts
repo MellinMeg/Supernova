@@ -1,5 +1,3 @@
-import { gsap } from "gsap";
-
 export function handleMenuMobile() { 
   const menuMobile = document.querySelector('.MenuMobile');
   let allHtml = document.querySelector('html'); 
@@ -8,7 +6,12 @@ export function handleMenuMobile() {
 
   menuMobile.addEventListener('click', () => { 
     menuMobile?.classList.toggle('active'); 
-    document.body.classList.toggle('menu-open');
+
+    if (menuMobile.classList.contains('active')) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
 
     if( document.body.classList.contains('menu-open')) {
       allHtml?.classList.add('overflow-hidden');
@@ -17,15 +20,7 @@ export function handleMenuMobile() {
       allHtml?.classList.remove('overflow-hidden');
     }
 
-    const logo = document.querySelector('.Logo');
-    if(!logo) return;
-    
-    // gsap.to(logo, {
-      
-    // });
-    
   });
-  
 
 }
 
