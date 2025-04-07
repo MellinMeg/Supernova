@@ -146,14 +146,14 @@
   --vertical-padding: clamp(1.25rem, 3.75rem, 3.75rem);
 
   // Variables
-  --logo-color: var(--clr-black);
+  --logo-color: var(--clr-white);
 
   @media (width >= 1024px) {
     --fs-heading-1: clamp(var(--fs-700), 4vw, var(--fs-900));
     --fs-heading-2: clamp(var(--fs-650), 4vw, var(--fs-800));
     --fs-heading-3: clamp(var(--fs-550), 4vw, var(--fs-700));
     --lateral-padding: 6rem;
-    --header-height: 5.65rem;
+    --header-height: 7rem;
   }
 }
 
@@ -164,6 +164,10 @@ html {
   font-family: var(--ff-body);
   font-weight: var(--fw-300);
   scrollbar-width: none;
+
+  &.overflow-hidden {
+    overflow: hidden;
+  }
 
   // --origin-x: calc(var(--click-x, 0.5) * 100%);
   // --origin-y: calc(var(--click-y, 0.5) * 100%);

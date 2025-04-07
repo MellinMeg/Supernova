@@ -1,35 +1,32 @@
+import { gsap } from "gsap";
 
 export function handleMenuMobile() { 
   const menuMobile = document.querySelector('.MenuMobile');
+  let allHtml = document.querySelector('html'); 
 
   if (!menuMobile) return;
 
-  const openMenu = () => { 
-    menuMobile?.classList.toggle('active');
-  };
+  menuMobile.addEventListener('click', () => { 
+    menuMobile?.classList.toggle('active'); 
+    document.body.classList.toggle('menu-open');
 
-  menuMobile.addEventListener('click', openMenu);
+    if( document.body.classList.contains('menu-open')) {
+      allHtml?.classList.add('overflow-hidden');
+    }
+    else {
+      allHtml?.classList.remove('overflow-hidden');
+    }
 
-  // const closeButton = document.querySelector('.MenuMobile__CloseButton');
-  // const mobileNav = document.querySelector('.MenuMobile__Nav');
+    const logo = document.querySelector('.Logo');
+    if(!logo) return;
+    
+    // gsap.to(logo, {
+      
+    // });
+    
+  });
   
-  // const closeMenu = () => {
-  //   mobileNav?.classList.remove('open');
-  //   menuMobile?.classList.remove('active');
-  // };
 
-  // const openMenu = () => {
-  //   mobileNav?.classList.add('open');
-  //   menuMobile?.classList.add('active');
-  // };
-  
-  // if (menuMobile && mobileNav) {
-  //   menuMobile.addEventListener('click', openMenu);
-  // }
-
-  // if (closeButton && mobileNav) {
-  //   closeButton.addEventListener('click', closeMenu);
-  // } 
 }
 
 handleMenuMobile();

@@ -31,7 +31,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: calc(var(--vertical-padding) * 3) var(--lateral-padding)
+    padding: calc(var(--header-height) * 1.5) var(--lateral-padding)
       var(--vertical-padding);
   }
 
@@ -109,7 +109,7 @@
 
   &__Blob {
     border-radius: 50%;
-    filter: blur(100px);
+    filter: blur(50px);
     position: absolute;
     pointer-events: none;
 
@@ -150,13 +150,8 @@
       align-items: flex-end;
     }
 
-    // &__Blob {
-    //   filter: blur(100px);
-    // }
-
-    &__Wrapper {
-      padding: calc(var(--header-height) + 4rem) var(--lateral-padding)
-        var(--vertical-padding);
+    &__Blob {
+      filter: blur(100px);
     }
   }
 }

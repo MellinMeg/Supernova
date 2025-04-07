@@ -2,6 +2,9 @@
   font-family: var(--ff-logo);
   font-size: var(--fs-logo);
   color: var(--logo-color);
+  font-weight: var(--fw-500);
+  font-variation-settings: "wght" 400, "wdth" 100;
+  transition: all 0.3s ease;
 
   &__Wrapper {
     display: flex;
@@ -12,19 +15,5 @@
   &__Name {
     height: auto;
     position: relative;
-
-    // &::before {
-    //   content: "";
-    //   display: block;
-    //   width: 100%;
-    //   aspect-ratio: 1;
-    //   background-color: var(--clr-yellow);
-    //   border-radius: 50%;
-    //   position: absolute;
-    //   left: 0;
-    //   top: 50%;
-    //   transform: translate(0%, -50%);
-    //   z-index: -1;
-    // }
   }
 }

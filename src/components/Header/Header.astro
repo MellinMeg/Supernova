@@ -13,13 +13,14 @@ const props: HeaderProps = Astro.props;
 ---
 
 <div class="Header">
-  <Logo />
-  <Menu /> 
-  <MenuMobile />
-  <MobileNavigation />
-  <HeaderQuotes /> 
-  <!-- socials -->
+  <div class="Header__Wrapper">
+    <Logo />
+    <Menu /> 
+    <MenuMobile />
+    <HeaderQuotes /> 
+  </div> 
   <slot />
+  <MobileNavigation />
 </div>
 
 <script src="./header.client.ts"></script>

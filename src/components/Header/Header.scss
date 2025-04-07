@@ -1,22 +1,26 @@
 .Header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem var(--lateral-padding);
-  backface-visibility: hidden;
+  flex-direction: column;
   position: fixed;
+  padding: 1rem var(--lateral-padding);
   top: 0;
   left: 0;
   right: 0;
-  transform: translate(0, 0%);
+  height: auto;
   z-index: 10;
   margin: 1rem;
-  height: var(--header-height);
   background: var(--clr-white-30);
   border-radius: 2.5rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  transition: height 0.4s ease;
+
+  &__Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    backface-visibility: hidden;
+  }
 
   .HeaderQuotes {
     flex: 0 1 20%;
@@ -31,8 +35,14 @@
   }
 
   @media (min-width: 768px) {
+    height: var(--header-height);
+
     .Menu {
       display: block;
     }
+  }
+
+  @media (min-width: 1024px) {
+    padding: 1rem calc(var(--lateral-padding) / 2);
   }
 }
