@@ -87,6 +87,7 @@ export function setupClientMobileNavigation() {
     const header = document.querySelector('.Header') as HTMLElement;
     const menuMobile = document.querySelector('.MenuMobile');
     let allHtml = document.querySelector('html');
+    const main = document.querySelector('main') as HTMLElement;
 
     if (!mobileNav || !hamburger || !mobileNavItems || !header || !menuMobile) return;
 
@@ -126,9 +127,11 @@ export function setupClientMobileNavigation() {
       if (open) {
         document.body.classList.add('menu-open');
         allHtml?.classList.add('overflow-hidden');
+        main.style.filter = 'blur(10px)';
       } else {
         document.body.classList.remove('menu-open');
         allHtml?.classList.remove('overflow-hidden');
+        main.style.filter = 'blur(0px)';
       }
     }
 

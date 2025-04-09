@@ -1,6 +1,8 @@
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
-export function setupClientHeroHome() {
+export function handleBlobs() {
   const heroHome = document.querySelector('.HeroHome') as HTMLElement;
   const blobs = document.querySelectorAll('.HeroHome__Blob');
   const randomPoint = (min: number, max: number) => gsap.utils.random(min, max);
@@ -74,4 +76,72 @@ export function setupClientHeroHome() {
 
 }
 
-setupClientHeroHome();
+// handleBlobs();
+
+export function parallaxCiao(){
+  const ciao = document.querySelector('.HeroHome__Ciao'); 
+  const iLetter = document.querySelector('.HeroHome__ILetter'); 
+
+  if(!iLetter || !ciao) return;
+
+  ciao.addEventListener('mouseover', () => { 
+    gsap.to(iLetter, {
+      width: '11.5rem',
+      duration: 0.5,
+      ease: 'power2.out',
+    });
+  });
+  
+  ciao.addEventListener('mouseleave', () => { 
+    gsap.to(iLetter, {
+      width: '2rem',
+      duration: 0.5,
+      ease: 'power2.out',
+    });
+  });
+
+  const initialTl = gsap.timeline();
+  initialTl.to(iLetter, {
+    width: '11.5rem',
+    duration: 0.5,
+    ease: 'power2.out',
+  })
+  initialTl.to(iLetter, {
+    width: '2rem',
+    duration: 0.5,
+    ease: 'power2.out',
+  }) 
+  initialTl.from(".line span", 1.8, {
+    y: '150',
+    ease: "power4.out",
+    delay: 1,
+    skewY: 7,
+    stagger: {
+      amount: 0.3
+    }
+  }, '-=1.5') 
+
+  
+  
+  if (window.innerWidth < 768) {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.HeroHome',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 1,
+      }
+    });
+
+    tl.to(iLetter, {
+      width: '11.5rem',
+    })
+    tl.to(iLetter, {
+      width: '2rem',
+    }) 
+  }
+
+}
+
+
+parallaxCiao();
