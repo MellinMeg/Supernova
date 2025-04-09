@@ -1,0 +1,14 @@
+---
+import "./IconPhp.scss";
+import type { IconPhpProps } from "./IconPhp.ts";
+
+export interface Props extends IconPhpProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="IconPhp"> 
+  <slot />
+</div>
+
+<script src="./IconPhp.client.ts"></script>

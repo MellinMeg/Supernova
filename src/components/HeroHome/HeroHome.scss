@@ -50,15 +50,31 @@
   }
 
   &__Content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     span {
       font-size: var(--fs-550);
     }
   }
 
+  // &__Title {
+  //   --fs-heading-1: clamp(var(--fs-700), calc(10vw + 1rem), var(--fs-1000));
+  //   font-size: var(--fs-heading-1);
+  //   font-family: var(--ff-logo);
+  // }
+
   &__Title {
-    --fs-heading-1: clamp(var(--fs-700), calc(10vw + 1rem), var(--fs-1000));
-    font-size: var(--fs-heading-1);
-    font-family: var(--ff-logo);
+    display: flex;
+    align-items: flex-start;
+
+    svg {
+      height: auto;
+    }
+
+    span {
+      padding: 0.3rem;
+    }
   }
 
   @media (min-width: 768px) {
@@ -77,7 +93,7 @@
     }
 
     &__Wrapper {
-      padding: calc(var(--header-height) + 4rem) var(--lateral-padding)
+      padding: calc(var(--header-height) + 2rem) var(--lateral-padding)
         var(--vertical-padding);
     }
   }

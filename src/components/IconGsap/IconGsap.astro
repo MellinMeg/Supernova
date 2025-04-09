@@ -1,0 +1,14 @@
+---
+import "./IconGsap.scss";
+import type { IconGsapProps } from "./IconGsap.ts";
+
+export interface Props extends IconGsapProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="IconGsap"> 
+  <slot />
+</div>
+
+<script src="./IconGsap.client.ts"></script>

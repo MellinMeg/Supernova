@@ -1,19 +1,22 @@
 .Logo {
-  font-family: var(--ff-logo);
-  font-size: var(--fs-logo);
-  color: var(--logo-color);
-  font-weight: var(--fw-500);
-  font-variation-settings: "wght" 400, "wdth" 100;
-  transition: all 0.3s ease;
+  width: 13rem;
+  // font-family: var(--ff-logo);
+  // font-size: var(--fs-logo);
+  // color: var(--logo-color);
+  // font-weight: var(--fw-500);
+  // font-variation-settings: "wght" 400, "wdth" 100;
+  // transition: all 0.3s ease;
 
   &__Wrapper {
     display: flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
+    align-items: flex-start;
 
-  &__Name {
-    height: auto;
-    position: relative;
+    svg {
+      height: auto;
+    }
+
+    span {
+      padding: 0.15rem;
+    }
   }
 }
