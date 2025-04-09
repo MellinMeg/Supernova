@@ -1,6 +1,6 @@
 ---
 import "./HeroHome.scss";
-import Heading from "../Heading/Heading.astro";
+import Heading from "../Heading/Heading.astro"; 
 import type { HeroHomeProps } from "./HeroHome.ts";
 
 export interface Props extends HeroHomeProps {}
@@ -10,13 +10,18 @@ const props: Props = Astro.props;
 
 <div class="HeroHome"> 
   <div class="HeroHome__Wrapper">
-    <div class="HeroHome__Ciao">
-      <Heading tag="h2" class="Heading4">Hi!</Heading>
+    <div class="HeroHome__Illustrations HeroHome__Illustrations--Top">
+      <div class="HeroHome__IllustrationLeft">
+        <img src="src/assets/illustrations/gsapillustration.svg"/>
+      </div>
+      <div class="HeroHome__IllustrationRight">
+        <img src="src/assets/illustrations/phpillustration.svg"/>
+      </div>
     </div>
     <div class="HeroHome__Content">
+      <Heading tag="h2" class="Heading4">Hi!</Heading>
       <span>I'm</span>
       <div class="HeroHome__Title">
-        
 
           <svg xmlns="http://www.w3.org/2000/svg" width="98" height="126" viewBox="0 0 98 126" fill="none">
             <path d="M44.8998 126C44.8998 106.56 43.2198 85.98 39.8598 64.26C36.4998 42.54 32.2998 26.52 27.2598 16.2V106.2C27.2598 110.16 27.7398 114.18 28.6998 118.26C29.7798 122.22 30.9198 124.62 32.1198 125.46V126H0.799805V125.46C1.9998 124.62 3.0798 122.22 4.0398 118.26C5.1198 114.18 5.6598 110.16 5.6598 106.2V19.8C5.6598 15.84 5.1198 11.88 4.0398 7.92001C3.0798 3.84 1.9998 1.38 0.799805 0.540001V0H15.1998C25.5198 0 33.3198 10.56 38.5998 31.68C43.9998 52.8 47.5398 76.56 49.2198 102.96C50.8998 76.8 54.4398 53.1 59.8398 31.86C65.3598 10.62 73.2798 0 83.5998 0H97.9998V0.540001C96.7998 1.38 95.6598 3.84 94.5798 7.92001C93.6198 11.88 93.1398 15.84 93.1398 19.8V106.2C93.1398 110.16 93.6198 114.18 94.5798 118.26C95.6598 122.22 96.7998 124.62 97.9998 125.46V126H66.6798V125.46C67.8798 124.62 68.9598 122.22 69.9198 118.26C70.9998 114.18 71.5398 110.16 71.5398 106.2V16.2C66.4998 26.52 62.2998 42.54 58.9398 64.26C55.5798 85.98 53.8998 106.56 53.8998 126H44.8998Z" fill="white"/>
@@ -55,13 +60,18 @@ const props: Props = Astro.props;
           <svg xmlns="http://www.w3.org/2000/svg" width="67" height="94" viewBox="0 0 67 94" fill="none">
             <path d="M23.9817 93.44C16.5417 93.44 10.7217 91.52 6.52167 87.68C2.32167 83.72 0.22168 78.74 0.22168 72.74C0.22168 67.82 1.66169 62.78 4.54169 57.62C7.54169 52.46 11.8617 47.66 17.5017 43.22C20.9817 40.46 23.9817 37.1 26.5017 33.14C29.0217 29.18 30.2817 25.64 30.2817 22.52C30.2817 19.16 28.7817 16.82 25.7817 15.5C25.0617 15.38 24.0417 15.32 22.7217 15.32C17.3217 15.32 12.5217 17.12 8.32172 20.72C4.24172 24.32 2.14167 29.2999 2.02167 35.66H1.3017C2.1417 12.0199 11.7417 0.199951 30.1017 0.199951C35.3817 0.199951 40.4217 1.45995 45.2217 3.97996C50.0217 6.49996 53.9217 10.4 56.9217 15.68C60.0417 20.96 61.6017 27.56 61.6017 35.48V72.2C61.6017 76.16 62.0817 80.18 63.0417 84.26C64.1217 88.22 65.2617 90.62 66.4617 91.46V92H40.0017V74.36H39.6417C39.6417 80.12 38.2017 84.74 35.3217 88.22C32.4417 91.7 28.6617 93.44 23.9817 93.44ZM23.9817 88.22C26.6217 88.22 29.2017 86.78 31.7217 83.9C34.2417 80.9 36.2217 77.36 37.6617 73.28C39.2217 69.2 40.0017 65.72 40.0017 62.84V35.48C40.0017 30.8 39.1017 26.9 37.3017 23.78C35.5017 20.54 33.0417 18.2 29.9217 16.76L29.5617 17.12C33.7617 19.52 35.8617 23.18 35.8617 28.1C35.8617 31.46 34.9617 35 33.1617 38.72C31.4817 42.32 29.4417 45.5 27.0417 48.26C24.2817 51.38 22.0617 55.64 20.3817 61.04C18.7017 66.32 17.8617 71.42 17.8617 76.34C17.8617 79.94 18.3417 82.82 19.3017 84.98C20.3817 87.14 21.9417 88.22 23.9817 88.22Z" fill="white"/>
           </svg>
- 
 
       </div> 
     </div>
+    <div class="HeroHome__Illustrations HeroHome__Illustrations--Bottom">
+      <div class="HeroHome__IllustrationLeft">
+        <img src="src/assets/illustrations/htmlillustration.svg"/>
+      </div>
+      <div class="HeroHome__IllustrationRight">
+        <img src="src/assets/illustrations/scssillustration.svg"/>
+      </div>
+    </div>
   </div>
-
-
 </div>
 
 <script src="./HeroHome.client.ts"></script>
