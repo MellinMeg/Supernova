@@ -9,10 +9,12 @@ export function setupClientStickers() {
   const title = stickersEl.querySelector('.Heading1') as HTMLElement;
   const stickers = wrapper.querySelectorAll('.Stickers__Image') as NodeListOf<HTMLElement>;
   const wrapperHeight = wrapper.getBoundingClientRect().height;
-
   const count = document.querySelector(".Stickers__Counter") as HTMLElement;
   const loader = document.querySelector(".Stickers__Loader") as HTMLElement;
   const progressBar = document.querySelector(".Stickers__Loadingbar") as HTMLElement;
+
+  // set html overflow to hidden
+  document.documentElement.style.overflow = "hidden";
 
   function countPercent() {
     const newPercent = (loadingTl.progress() * 100).toFixed();
@@ -56,7 +58,11 @@ export function setupClientStickers() {
         top: '-10000px',
         duration: 0.2,
         zIndex: -20,
-      }, '-=0.4'); 
+      }, '-=0.4')
+      .to(document.documentElement, {
+        overflow: "auto",
+        duration: 0.1,
+      }, '-=0.4')
   }
   
 }
