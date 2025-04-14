@@ -1,12 +1,31 @@
 .Stickers {
+  height: 100vh;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   z-index: 50;
   transform-origin: right top;
   overflow: hidden;
+
+  &__Loader {
+    height: 1rem;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    bottom: 0;
+  }
+
+  &__Loadingbar {
+    width: 0%;
+    background: white;
+    height: 0.6rem;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
 
   &__Bg {
     position: absolute;
@@ -20,27 +39,52 @@
   }
 
   &__Wrapper {
-    position: absolute;
-    left: -10%;
-    top: -10%;
-    width: 120vh;
-    height: 120vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    position: relative;
+    padding: 2rem;
+    gap: 1rem;
+    flex-direction: column;
   }
 
   &__Image {
-    background-color: var(--clr-white);
-    border-radius: 20rem;
-    padding: 1rem;
+    position: absolute;
 
     img {
-      width: 10rem;
-      height: auto;
+      width: 50vw;
+      height: 50vw;
     }
-    // margin-left: calc(var(--x) - 2rem);
-    // margin-bottom: calc(var(--y) - 2rem);
+
+    &[data-index="0"] {
+      top: 10%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+    }
+
+    &[data-index="1"] {
+      bottom: 10%;
+      left: 10%;
+      transform: translate(-50%, 50%);
+    }
+
+    &[data-index="2"] {
+      top: 10%;
+      right: -50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &[data-index="3"] {
+      bottom: 10%;
+      right: 10%;
+      transform: translate(50%, 50%);
+    }
+
+    &[data-index="4"] {
+      top: 55%;
+      left: 10%;
+    }
   }
 }

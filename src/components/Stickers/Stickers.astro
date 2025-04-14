@@ -1,47 +1,34 @@
 ---
 import "./Stickers.scss";
 import type { StickersProps } from "./Stickers.ts";
+import Heading from "../Heading/Heading.astro";
 
 export interface Props extends StickersProps {}
 
-const props: Props = Astro.props;
+const props: Props = Astro.props; 
+const stickers = [ 
+  { src: "src/assets/illustrations/htmlillustration.svg", alt: "scss" }, 
+  { src: "src/assets/illustrations/scssillustration.svg", alt: "scss" }, 
+  { src: "src/assets/illustrations/gsapillustration.svg", alt: "gsap" }, 
+  { src: "src/assets/illustrations/phpillustration.svg", alt: "php" }, 
+];
+
 ---
 
 <div class="Stickers"> 
   <div class="Stickers__Bg"></div>
   <div class="Stickers__Wrapper">
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/phpillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/scssillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/htmlillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/gsapillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/htmlillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/phpillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/gsapillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/scssillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/gsapillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/htmlillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/scssillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/phpillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/htmlillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/gsapillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/scssillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/phpillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/htmlillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/phpillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/scssillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/gsapillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/htmlillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/gsapillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/phpillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/htmlillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/scssillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/gsapillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/phpillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/scssillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/htmlillustration.svg"/></div>
-    <div class="Stickers__Image"><img class="sticker" src="src/assets/illustrations/scssillustration.svg"/></div>
-
+    <Heading tag="h4" class="Heading1">Loading...</Heading>
+    <div class="Stickers__Loader">
+      <div class="Stickers__Loadingbar"></div>
+    </div>
+    <span class="Stickers__Counter">0%</span> 
+      {stickers.map((sticker, index) => (
+        <div class="Stickers__Image" data-index={index}>
+          <img class="sticker" src={sticker.src} alt={sticker.alt} />
+        </div>
+      ))} 
   </div>
 </div>
-
+ 
 <script src="./Stickers.client.ts"></script>

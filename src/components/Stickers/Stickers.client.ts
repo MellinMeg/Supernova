@@ -3,24 +3,61 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export function setupClientStickers() {
-  const wrapper = document.querySelector('.Stickers__Wrapper');
-  if (!wrapper) return;
+  const stickersEl = document.querySelector('.Stickers') as HTMLElement;
+  const wrapper = stickersEl.querySelector('.Stickers__Wrapper') as HTMLElement;
+  const bg = stickersEl.querySelector('.Stickers__Bg') as HTMLElement;
+  const title = stickersEl.querySelector('.Heading1') as HTMLElement;
+  const stickers = wrapper.querySelectorAll('.Stickers__Image') as NodeListOf<HTMLElement>;
   const wrapperHeight = wrapper.getBoundingClientRect().height;
 
-  const stickers = wrapper.querySelectorAll('.Stickers__Image');
-  window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-      gsap.to(stickers, {
+  const count = document.querySelector(".Stickers__Counter") as HTMLElement;
+  const loader = document.querySelector(".Stickers__Loader") as HTMLElement;
+  const progressBar = document.querySelector(".Stickers__Loadingbar") as HTMLElement;
+
+  function countPercent() {
+    const newPercent = (loadingTl.progress() * 100).toFixed();
+    count.innerHTML = newPercent + "%";
+  }
+
+  const loadingTl = gsap.timeline({
+    paused: false,
+    onUpdate: countPercent,
+    onComplete: loadComplete,
+  });
+
+  loadingTl.to(progressBar, { width: "100%", duration: 2, ease: "power2.inOut" });
+
+  function loadComplete() {
+    count.innerHTML = "100%";
+    progressBar.style.width = "100%";
+  
+      gsap.timeline()
+      .to([loader, count, title], {
+        opacity: 0,
+        duration: 0.3,
+        ease: 'sine.out',
+      })
+      .to(stickers, {
         y: wrapperHeight ? wrapperHeight * 1.5 : 0,
-        duration: 2,
+        duration: 1.2,
         ease: "power2.inOut",
         stagger: {
           amount: 0.3,
           from: 'end',
         },
-      })
-    }, 1000);
-  });
+      }, '-=0.6')
+      .to(bg, {
+        backdropFilter: 'blur(0px)',
+        duration: 0.2,
+        opacity: 0,
+        ease: 'sine.out',
+      }, '-=0.5')
+      .to(stickersEl, {
+        top: '-10000px',
+        duration: 0.2,
+        zIndex: -20,
+      }, '-=0.4'); 
+  }
   
 }
 
