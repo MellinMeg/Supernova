@@ -1,0 +1,40 @@
+---
+import ScrollingCta from "../ScrollingCta/ScrollingCta.astro";
+import "./HomeCards.scss";
+import type { HomeCardsProps } from "./HomeCards.ts";
+
+export interface Props extends HomeCardsProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="HomeCards"> 
+  <section class="HomeCards__Wrapper"> 
+    <div class="HomeCards__Pinned">
+        <div class="HomeCards__Container">
+            <div class="card">
+                <p>Picnic</p> 
+                <p>Picnic</p>
+            </div>
+            <div class="card">
+                <p>Tataki</p> 
+                <p>Tataki</p>
+            </div>
+            <div class="card">
+                <p>Instrument</p> 
+                <p>Instrument</p>
+            </div>
+            <div class="card">
+                <p>Bricolage</p> 
+                <p>Bricolage</p>
+            </div>
+            <div class="card">
+                <p>Le Murmure</p> 
+                <p>Le Murmure</p>
+            </div>
+        </div>
+    </div>
+  </section>
+</div>
+
+<script src="./HomeCards.client.ts"></script>
