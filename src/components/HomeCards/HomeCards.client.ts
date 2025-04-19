@@ -1,6 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CustomEase } from 'gsap/CustomEase';
+import Lenis from 'lenis'
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CustomEase) ;
 
@@ -11,6 +12,10 @@ export function setupClientHomeCards() {
     const pinHeight = document.querySelector('.HomeCards__Pinned') as HTMLElement;
     const container = root.querySelector('.HomeCards__Container') as HTMLElement;
     const cards = root.querySelectorAll('.CodeCard');
+
+    const lenis = new Lenis({
+      autoRaf: true,
+    })
 
     // if less than 768px, do not run the animation
     if (window.innerWidth < 768) {
