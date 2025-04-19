@@ -4,10 +4,8 @@ import Heading from "../Heading/Heading.astro";
 import RunnerLink from "../RunnerLink/RunnerLink.astro";
 import "./Footer.scss";
 import type { FooterProps } from "./Footer.ts";
-
 export interface Props extends FooterProps {}
-
-const props: Props = Astro.props;
+const props: FooterProps = Astro.props;
 ---
 
 <div class="Footer" id="contact">
