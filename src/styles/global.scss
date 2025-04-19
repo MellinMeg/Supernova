@@ -33,6 +33,16 @@
   --clr-black-80: rgba(20, 15, 24, 0.8);
   --clr-white-80: rgba(255, 255, 255, 0.8);
 
+  // gradient
+  --gradient-1: linear-gradient(
+    90deg,
+    var(--clr-red) 0%,
+    var(--clr-yellow) 25%,
+    var(--clr-pink) 50%,
+    var(--clr-blue) 75%,
+    var(--clr-green) 100%
+  );
+
   --fs-50: 0.375rem; // 6px
   --fs-100: 0.5rem; // 8px
   --fs-150: 0.625rem; // 10px

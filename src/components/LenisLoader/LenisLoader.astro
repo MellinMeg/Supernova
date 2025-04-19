@@ -1,0 +1,15 @@
+---
+import "./LenisLoader.scss";
+import type { LenisLoaderProps } from "./LenisLoader.ts";
+import 'lenis/dist/lenis.css'
+
+export interface Props extends LenisLoaderProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="LenisLoader"> 
+  <slot />
+</div>
+
+<script src="./LenisLoader.client.ts"></script>

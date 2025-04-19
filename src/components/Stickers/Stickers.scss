@@ -11,7 +11,7 @@
   &__Loader {
     height: 1rem;
     width: 100%;
-    border: 1px solid white;
+    border: 1px solid var(--clr-black);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -21,7 +21,8 @@
 
   &__Loadingbar {
     width: 0%;
-    background: white;
+    background: var(--gradient-1);
+
     height: 0.6rem;
     border-radius: 10px;
     transition: all 0.5s ease;
@@ -33,7 +34,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--clr-transparent);
+    background-color: var(--clr-white-80);
     backdrop-filter: blur(10px);
     z-index: -1;
   }

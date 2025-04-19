@@ -1,10 +1,9 @@
 ---
 import "../styles/app.scss";
-// import "../scripts/app.js";
-// import 'lenis/dist/lenis.css'
 
 import Header from "../components/Header/Header.astro";
 import Footer from "../components/Footer/Footer.astro";
+import LenisLoader from "../components/LenisLoader/LenisLoader.astro";
 ---
 
 <!doctype html>
@@ -21,7 +20,8 @@ import Footer from "../components/Footer/Footer.astro";
 		<title>Meg Supernova - Creative Developer</title>
 	</head>
 	<body>
-		<Header/>
+		<LenisLoader/>
+		<Header/>	
 		<main>
 			<slot /> 
 		</main>
