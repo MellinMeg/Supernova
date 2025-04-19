@@ -10,7 +10,7 @@ export function setupClientHomeCards() {
     const root = document.querySelector('.HomeCards__Wrapper') as HTMLElement;
     const pinHeight = document.querySelector('.HomeCards__Pinned') as HTMLElement;
     const container = root.querySelector('.HomeCards__Container') as HTMLElement;
-    const cards = root.querySelectorAll('.card');
+    const cards = root.querySelectorAll('.CodeCard');
 
     // if less than 768px, do not run the animation
     if (window.innerWidth < 768) {
@@ -52,7 +52,7 @@ export function setupClientHomeCards() {
       ScrollTrigger.create({
         trigger: pinHeight, 
         start:'top 80%',
-        end:'bottom 40%',
+        end:'bottom 10%',
         pin: container, 
         pinSpacing: false, 
         scrub: true, 
@@ -62,7 +62,7 @@ export function setupClientHomeCards() {
         scrollTrigger: {
           trigger: root, 
           start: 'top 60%', 
-          end: 'bottom 40%', 
+          end: 'bottom 10%', 
           scrub: true,
         }
       })

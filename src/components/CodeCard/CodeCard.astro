@@ -1,0 +1,36 @@
+---
+import "./CodeCard.scss";
+import type { CodeCardProps } from "./CodeCard.ts";
+import Heading from "../Heading/Heading.astro";
+
+export interface Props extends CodeCardProps {
+  class?: string;
+  color?: string;
+  description?: string;
+  title?: string;
+  alt?: string;
+}
+
+const {color, description, title, alt, ...attributes } = Astro.props;
+---
+
+<div class={`CodeCard ${color ? 'CodeCard--' + color : ''} ${attributes.class ?? ""}`}>
+  <div class="CodeCard__Top">
+    <div class="CodeCard__TopLeft">
+      <slot name="top-left" />
+    </div>
+    <div class="CodeCard__TopRight">
+      <slot name="top-right" />
+    </div>
+  </div>
+  <!-- <div class="CodeCard__Description">{description}</div> -->
+  <div class="CodeCard__Logo">
+    <slot name="logo" />
+  </div>
+  <Heading tag="h5" class="Heading6">{title}</Heading>
+  <slot />
+</div>
+
+
+<script src="./CodeCard.client.ts"></script>
+
