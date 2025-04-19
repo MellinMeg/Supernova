@@ -21,7 +21,7 @@ const { color, target, href, showIcon = true, ...attributes } = Astro.props;
 > 
   <span><slot /></span>
   {showIcon && (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 93 29">
+    <svg aria-label="freccia che indica un link da seguire" role="img" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 93 29">
       <path stroke="#fff" d="M.86 15.57H91m0 0C85.675 13.598 72.83 7.84 73.15.583M91 15.57c-5.192 1.314-17.85 8.992-17.85 13.409"/>
     </svg>
   )}

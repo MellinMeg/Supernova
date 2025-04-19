@@ -12,27 +12,27 @@ const props: FooterProps = Astro.props;
   <div class="Footer__Wrapper">
     <div class="Footer__Top">
       <div>
-        <Heading tag="h5" class="Heading6">Explore</Heading>
+        <Heading tag="h3" class="Heading6">Explore</Heading>
         <FooterMenu>
-          <RunnerLink href="#about" up="Me" down="Me"></RunnerLink> 
+          <RunnerLink href="#about" up="About Me" down="About Me"></RunnerLink> 
           <!-- <RunnerLink href="#projects" up="Projects" down="Projects"></RunnerLink>  -->
           <RunnerLink href="#contact" up="What's up?" down="Contact"></RunnerLink> 
         </FooterMenu>
       </div>
       <div>
-        <Heading tag="h5" class="Heading6">Email</Heading>
+        <Heading tag="h3" class="Heading6">Email</Heading>
         <RunnerLink href="mailto:gregoriferrimargherita@gmail.com" up="gregoriferrimargherita@gmail.com" down="gregoriferrimargherita@gmail.com"></RunnerLink>
       </div>
     </div>
     <Heading tag="h2" class="Heading--Footer Footer__Title">      
-      <a href="mailto:gregoriferrimargherita@gmail.com">Get in touch</a>
+      <a href="mailto:gregoriferrimargherita@gmail.com" aria-label="invia una mail a gregoriferrimargherita@gmail.com">Get in touch</a>
     </Heading>
     <div class="Footer__Bottom">
       <div class="Footer__Copyright">
-        <Heading tag="h5" class="Heading6">Copyright</Heading> 
+        <Heading tag="h3" class="Heading6">Copyright</Heading> 
         Margherita Gregori Ferri 2025</div>
       <div class="Footer__Socials">
-        <Heading tag="h5" class="Heading6">Follow Me</Heading> 
+        <Heading tag="h3" class="Heading6">Follow Me</Heading> 
     
         <FooterMenu>
           <RunnerLink href="https://www.instagram.com/meg_supernova" target="_blank" up="Instagram" down="Instagram" class=""></RunnerLink> 
@@ -49,7 +49,7 @@ const props: FooterProps = Astro.props;
     </div>
   </div>
 
-  <svg>
+  <svg aria-label="" role="img">
     <filter id='noiseFilter'>
       <feTurbulence 
         type='fractalNoise' 
