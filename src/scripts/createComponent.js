@@ -41,9 +41,7 @@ console.log("${name}Props", ${name.toLowerCase()}Data);
 `;
 
 const getTsClientTemplate = (name) => `
-export function setupClient${name}() {
-  console.log("${name} component initialized in the browser");
-}
+export function setupClient${name}() {}
 
 setupClient${name}();
 `;
