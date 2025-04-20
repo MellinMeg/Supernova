@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
   }
 
   &__Container {
@@ -19,6 +20,10 @@
   }
 
   @media (min-width: 768px) {
+    &__Wrapper {
+      gap: 0rem;
+    }
+
     &__Pinned {
       height: 500vh;
     }

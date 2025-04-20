@@ -7,6 +7,10 @@
 
     svg {
       height: auto;
+
+      path {
+        transition: fill 0.3s ease;
+      }
     }
 
     span {
