@@ -13,7 +13,7 @@ export interface Props extends RunnerLinkProps {
 const { target= "_self", href, up, down, ...attributes } = Astro.props;
 ---
 
-<a class={`RunnerLink ${attributes.class ?? ""}`} href={href} target={target} arial-label={up} aria-hidden="true">
+<a class={`RunnerLink ${attributes.class ?? ""}`} href={href} target={target} arial-label={up}>
   <span class="RunnerLink__Up">{up}</span> 
   <span class="RunnerLink__Down">{down}</span>
 </a>

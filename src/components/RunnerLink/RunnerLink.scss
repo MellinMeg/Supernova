@@ -1,6 +1,7 @@
 .RunnerLink {
   --runner-link-height: var(--fs-400);
   --runner-link-line-height: calc(var(--runner-link-height) * 1.5);
+  --runner-link-color: var(--clr-white);
 
   list-style: none;
   display: inline-flex;

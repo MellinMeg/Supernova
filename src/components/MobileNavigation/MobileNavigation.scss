@@ -10,7 +10,7 @@
   position: fixed;
   top: var(--header-height);
   left: 0;
-  background: var(--clr-white-30);
+  background: var(--clr-blue-60);
   border-radius: 0 0 2.5rem 2.5rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -31,6 +31,7 @@
 
     .RunnerLink {
       --runner-link-height: var(--fs-600);
+      --runner-link-color: var(--clr-white);
     }
   }
 }
