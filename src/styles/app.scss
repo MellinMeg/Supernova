@@ -1,2 +1,23 @@
 @use "global.scss";
 @use "typography.scss";
+@use "animations.scss";
+
+// Importazione di tutti i componenti
+@use "../components/Button/Button.scss";
+@use "../components/CodeCard/CodeCard.scss";
+@use "../components/Footer/Footer.scss";
+@use "../components/FooterMenu/FooterMenu.scss";
+@use "../components/Header/Header.scss";
+@use "../components/HeaderQuotes/HeaderQuotes.scss";
+@use "../components/Heading/Heading.scss";
+@use "../components/HeroHome/HeroHome.scss";
+@use "../components/HomeCards/HomeCards.scss";
+@use "../components/HomeIntro/HomeIntro.scss";
+@use "../components/Icon/Icon.scss";
+@use "../components/LenisLoader/LenisLoader.scss";
+@use "../components/Logo/Logo.scss";
+@use "../components/Menu/Menu.scss";
+@use "../components/MenuMobile/MenuMobile.scss";
+@use "../components/MobileNavigation/MobileNavigation.scss";
+@use "../components/RunnerLink/RunnerLink.scss";
+@use "../components/Stickers/Stickers.scss";

@@ -5,5 +5,3 @@ export interface HeaderQuotesProps {
 
 const headerquotesData: HeaderQuotesProps = { title: "HeaderQuotes" };
 
-console.log("HeaderQuotesProps", headerquotesData);
-

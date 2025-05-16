@@ -77,13 +77,10 @@
   --fw-700: 700;
   --fw-800: 800;
   --fw-900: 900;
-  // --ff-primary: "Rozha One", serif;
-  --ff-primary: "Giaza", serif;
-  --ff-secondary: "Boldonse", serif;
-  --ff-logo: "Melodrama", serif;
-  // --ff-tertiary: "Abel", serif;
-  --ff-tertiary: "MuseoModerno", serif;
-  --ff-body: var(--ff-tertiary);
+
+  --ff-primary: "MuseoModerno", "Abel", Arial, Helvetica, sans-serif;
+  --ff-secondary: "Boldonse", Georgia, "Times New Roman", Times, serif;
+  --ff-body: var(--ff-primary);
   --ff-heading: var(--ff-secondary);
 
   // Font size

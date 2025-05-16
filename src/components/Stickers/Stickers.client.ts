@@ -3,18 +3,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export function setupClientStickers() {
-  const stickersEl = document.querySelector('.Stickers') as HTMLElement;
-  const wrapper = stickersEl.querySelector('.Stickers__Wrapper') as HTMLElement;
-  const bg = stickersEl.querySelector('.Stickers__Bg') as HTMLElement;
-  const title = stickersEl.querySelector('.Heading1') as HTMLElement;
-  const stickers = wrapper.querySelectorAll('.Stickers__Image') as NodeListOf<HTMLElement>;
-  const wrapperHeight = wrapper.getBoundingClientRect().height;
-  const count = document.querySelector(".Stickers__Counter") as HTMLElement;
-  const loader = document.querySelector(".Stickers__Loader") as HTMLElement;
-  const progressBar = document.querySelector(".Stickers__Loadingbar") as HTMLElement;
-
-  document.addEventListener("DOMContentLoaded", () => {
-    // set html overflow to hidden
+  // document.addEventListener("DOMContentLoaded", () => {
+    const stickersEl = document.querySelector('.Stickers') as HTMLElement;
+    const wrapper = stickersEl.querySelector('.Stickers__Wrapper') as HTMLElement;
+    const bg = stickersEl.querySelector('.Stickers__Bg') as HTMLElement;
+    const title = stickersEl.querySelector('.Heading1') as HTMLElement;
+    const stickers = wrapper.querySelectorAll('.Stickers__Image') as NodeListOf<HTMLElement>;
+    const wrapperHeight = wrapper.getBoundingClientRect().height;
+    const count = document.querySelector(".Stickers__Counter") as HTMLElement;
+    const loader = document.querySelector(".Stickers__Loader") as HTMLElement;
+    const progressBar = document.querySelector(".Stickers__Loadingbar") as HTMLElement;
     document.documentElement.style.overflow = "hidden";
   
     function countPercent() {
@@ -28,6 +26,8 @@ export function setupClientStickers() {
       onComplete: loadComplete,
     });
   
+    gsap.set(stickersEl, {opacity: 0});
+    loadingTl.to(stickersEl, {opacity: 1, duration: 0.5, ease: "power2.inOut"}, '-=0.5')
     loadingTl.to(progressBar, { width: "100%", duration: 2, ease: "power2.inOut" });
   
     function loadComplete() {
@@ -65,8 +65,14 @@ export function setupClientStickers() {
           duration: 0.1,
         }, '-=0.4')
     }
-  });
+  // });
   
 }
 
 setupClientStickers();
+
+window.addEventListener('load', () => {
+  // const stickersEl = document.querySelector('.Stickers') as HTMLElement;
+
+  setupClientStickers();
+});

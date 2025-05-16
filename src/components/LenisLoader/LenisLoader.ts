@@ -5,5 +5,3 @@ export interface LenisLoaderProps {
 
 const lenisloaderData: LenisLoaderProps = { title: "LenisLoader" };
 
-console.log("LenisLoaderProps", lenisloaderData);
-

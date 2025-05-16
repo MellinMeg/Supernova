@@ -1,5 +1,5 @@
 ---
-import "./Stickers.scss";
+// import "./Stickers.scss";
 import type { StickersProps } from "./Stickers.ts";
 import Heading from "../Heading/Heading.astro";
 
@@ -22,12 +22,14 @@ const stickers = [
     <div class="Stickers__Loader">
       <div class="Stickers__Loadingbar"></div>
     </div>
+
+      
     <span class="Stickers__Counter">0%</span> 
-      {stickers.map((sticker, index) => (
+      <!-- {stickers.map((sticker, index) => (
         <div class="Stickers__Image" data-index={index}>
           <img class="sticker" src={sticker.src} alt={sticker.alt} />
         </div>
-      ))} 
+      ))}  -->
   </div>
 </div>
 

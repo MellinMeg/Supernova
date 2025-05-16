@@ -5,5 +5,3 @@ export interface MenuProps {
 
 const menuData: MenuProps = { title: "Menu" };
 
-console.log("MenuProps", menuData);
-

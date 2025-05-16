@@ -5,5 +5,3 @@ export interface RunnerLinkProps {
 
 const runnerlinkData: RunnerLinkProps = { title: "RunnerLink" };
 
-console.log("RunnerLinkProps", runnerlinkData);
-

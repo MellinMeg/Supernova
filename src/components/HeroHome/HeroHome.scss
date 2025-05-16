@@ -1,5 +1,4 @@
 .HeroHome {
-  height: 100vh;
   color: var(--clr-white);
   width: 100%;
   z-index: 1;
@@ -52,13 +51,25 @@
     }
   }
 
+  &__Hi,
+  &__Span,
+  &__Title,
+  &__FD {
+    opacity: 0;
+    will-change: transform;
+
+    & * {
+      will-change: transform;
+    }
+  }
+
   &__Illustrations {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 
-    img {
+    svg {
       width: 100%;
       height: auto;
       max-width: 2rem;
@@ -74,6 +85,12 @@
   &__Title {
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    will-change: transform;
+
+    & > *:first-child {
+      padding-top: 1rem;
+    }
 
     div {
       display: flex;
@@ -91,6 +108,8 @@
   }
 
   @media (min-width: 768px) {
+    height: 100vh;
+
     &__Wrapper {
       padding: calc(var(--header-height) + 2rem) var(--lateral-padding)
         var(--vertical-padding);

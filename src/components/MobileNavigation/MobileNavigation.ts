@@ -5,5 +5,3 @@ export interface MobileNavigationProps {
 
 const mobilenavigationData: MobileNavigationProps = { title: "MobileNavigation" };
 
-console.log("MobileNavigationProps", mobilenavigationData);
-

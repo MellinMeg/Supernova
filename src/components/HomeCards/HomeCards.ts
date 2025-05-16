@@ -5,5 +5,3 @@ export interface HomeCardsProps {
 
 const homecardsData: HomeCardsProps = { title: "HomeCards" };
 
-console.log("HomeCardsProps", homecardsData);
-

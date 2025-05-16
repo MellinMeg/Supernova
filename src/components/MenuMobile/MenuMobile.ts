@@ -3,5 +3,3 @@ export interface MenuMobileProps {
 } 
 
 const menuMobileData: MenuMobileProps = { isOpen: false };
-
-console.log("MenuMobileProps", menuMobileData);

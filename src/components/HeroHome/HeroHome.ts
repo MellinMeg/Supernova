@@ -5,5 +5,3 @@ export interface HeroHomeProps {
 
 const herohomeData: HeroHomeProps = { title: "HeroHome" };
 
-console.log("HeroHomeProps", herohomeData);
-

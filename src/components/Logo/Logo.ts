@@ -5,5 +5,3 @@ export interface LogoProps {
 
 const logoData: LogoProps = { title: "Logo" };
 
-console.log("LogoProps", logoData);
-

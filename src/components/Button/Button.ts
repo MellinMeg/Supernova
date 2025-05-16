@@ -5,5 +5,3 @@ export interface ButtonProps {
 
 const buttonData: ButtonProps = { title: "Button" };
 
-console.log("ButtonProps", buttonData);
-

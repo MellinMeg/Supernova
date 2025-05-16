@@ -5,5 +5,3 @@ export interface FooterMenuProps {
 
 const footermenuData: FooterMenuProps = { title: "FooterMenu" };
 
-console.log("FooterMenuProps", footermenuData);
-

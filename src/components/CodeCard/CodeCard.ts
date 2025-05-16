@@ -5,5 +5,3 @@ export interface CodeCardProps {
 
 const codecardData: CodeCardProps = { title: "CodeCard" };
 
-console.log("CodeCardProps", codecardData);
-

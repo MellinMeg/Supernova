@@ -5,5 +5,3 @@ export interface StickersProps {
 
 const stickersData: StickersProps = { title: "Stickers" };
 
-console.log("StickersProps", stickersData);
-

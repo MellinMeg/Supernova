@@ -1,0 +1,14 @@
+---
+// import "./HomeIntro.scss";
+import type { HomeIntroProps } from "./HomeIntro.ts";
+
+export interface Props extends HomeIntroProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="HomeIntro"> 
+  sono la home intro
+</div>
+
+<script src="./HomeIntro.client.ts"></script>

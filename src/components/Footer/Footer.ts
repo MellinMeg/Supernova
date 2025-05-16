@@ -5,5 +5,3 @@ export interface FooterProps {
 
 const footerData: FooterProps = { title: "Footer" };
 
-console.log("FooterProps", footerData);
-
