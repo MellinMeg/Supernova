@@ -38,6 +38,21 @@ export function setupClientHomeCards() {
       }
     });
 
+    const tlMargin = gsap.timeline({
+      scrollTrigger: {
+        trigger: root, 
+        start: 'top 50%', 
+        end: 'bottom 10%', 
+        scrub: true,
+      }
+    })
+
+    tlMargin.to(root, {
+      margin: 0, 
+      duration: 1, 
+    })
+
+
     // if less than 768px, do not run the animation
     if (window.innerWidth < 768) {
       // const tl = gsap.timeline({
