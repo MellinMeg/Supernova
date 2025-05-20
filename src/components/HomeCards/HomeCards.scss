@@ -2,8 +2,7 @@
   background: var(--clr-blue);
   padding: 6rem 0 0;
   position: relative;
-  z-index: 1;
-  overflow: hidden;
+  z-index: 3;
 
   &::after,
   &::before {
@@ -33,7 +32,28 @@
     border-top-left-radius: 5rem;
     border-top-right-radius: 5rem;
     background: var(--clr-white);
-    margin: 3rem;
+    margin: 3rem 6rem;
+  }
+
+  &__Description {
+    font-size: var(--fs-600);
+    margin: calc(var(--lateral-padding) / 2) var(--lateral-padding);
+  }
+
+  &__Title {
+    line-height: var(--lh-600);
+  }
+
+  &__Description,
+  &__Title {
+    text-align: left;
+    margin: 0 2rem;
+    opacity: 0;
+    will-change: transform;
+
+    & * {
+      will-change: transform;
+    }
   }
 
   &__Container {

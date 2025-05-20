@@ -1,12 +1,12 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CustomEase } from 'gsap/CustomEase';
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CustomEase) ;
 
 export function setupClientHomeCards() {
-
-  window.addEventListener("DOMContentLoaded", () => { 
     const root = document.querySelector('.HomeCards__Wrapper') as HTMLElement;
     const pinHeight = document.querySelector('.HomeCards__Pinned') as HTMLElement;
     const container = root.querySelector('.HomeCards__Container') as HTMLElement;
@@ -38,19 +38,23 @@ export function setupClientHomeCards() {
       }
     });
 
-    const tlMargin = gsap.timeline({
+    const genericTl = gsap.timeline({
       scrollTrigger: {
         trigger: root, 
-        start: 'top 50%', 
-        end: 'bottom 10%', 
+        start: 'top 90%', 
+        end: 'bottom 50%', 
         scrub: true,
       }
     })
 
-    tlMargin.to(root, {
+    genericTl
+    .to(root, {
       margin: 0, 
+      // y: -1000,
       duration: 1, 
+      ease: "power3.out",
     })
+  
 
 
     // if less than 768px, do not run the animation
@@ -130,7 +134,39 @@ export function setupClientHomeCards() {
       }, 'step+=0.5') 
     }
 
-  })
 }
 
 setupClientHomeCards();
+
+ScrollTrigger.create({
+  trigger: '.HomeCards__Title',
+  start: 'top 80%',
+  once: true,
+  onEnter: () => {
+    splitText();
+  }
+});
+
+export function splitText() { 
+  let selectors = ['.HomeCards__Title', '.HomeCards__Description']
+  gsap.set(selectors, {opacity: 1});
+
+  selectors.forEach((selector) => {
+    const el = document.querySelector(selector);
+    if (!el) return;
+
+    const split = new SplitText(el, {
+      type: "lines",
+      lineClass: "line",
+      autoSplit: true,
+    });
+
+    gsap.from(split.lines, {
+      duration: 0.6,
+      yPercent: 100,
+      opacity: 0,
+      stagger: 0.05,
+      ease: "power2.out",
+    })
+  }); 
+}

@@ -1,3 +1,81 @@
 .HomeIntro {
+  background: var(--clr-blue);
+  z-index: 3;
+  position: relative;
+  color: var(--clr-white);
 
+  &::after,
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 40%;
+  }
+
+  &::before {
+    background-color: var(--clr-blue);
+    filter: url(#noiseFilter);
+  }
+
+  &__Wrapper {
+    height: 400vh;
+  }
+
+  &__Container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__Top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 2.5vw;
+    border-bottom: 1px dashed var(--clr-white);
+  }
+
+  .Heading2 {
+    opacity: 0;
+    will-change: transform;
+
+    & * {
+      will-change: transform;
+    }
+  }
+
+  &__Paragraphs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5vw 2.5vw;
+    column-gap: 2.5vw;
+  }
+
+  &__Word {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin: -0.14em 0; /* Depends on the font used */
+  }
+
+  &__Word span {
+    display: block;
+    padding: 0.14em 0; /* Depends on the font used */
+  }
+
+  &__Paragraph:not(:first-child) &__Word span {
+    transform: translate(0, 100%);
+  }
+
+  @media (min-width: 768px) {
+    &__Paragraphs {
+      flex-direction: row;
+    }
+  }
 }

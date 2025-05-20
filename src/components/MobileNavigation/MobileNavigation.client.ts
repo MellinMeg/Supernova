@@ -80,7 +80,6 @@
 import { gsap } from 'gsap';
 
 export function setupClientMobileNavigation() {
-  window.addEventListener('DOMContentLoaded', () => {
     const mobileNav = document.querySelector('.MobileNavigation') as HTMLElement;
     const mobileNavItems = document.querySelectorAll('.MobileNavigation li a') as NodeListOf<HTMLElement>;
     const hamburger = document.querySelector('.MenuMobile') as HTMLElement;
@@ -89,14 +88,17 @@ export function setupClientMobileNavigation() {
     let allHtml = document.querySelector('html');
     const main = document.querySelector('main') as HTMLElement;
 
-    if (!mobileNav || !hamburger || !mobileNavItems || !header || !menuMobile) return;
+    if (!mobileNav || !hamburger || !header || !menuMobile) return;
 
     const mediaQuery = window.matchMedia('(max-width: 767px)');
     const tl = gsap.timeline({ paused: true });
     let isOpen = false;
 
     gsap.set(mobileNav, { opacity: 0, zIndex: -1 });
-    gsap.set(mobileNavItems, { translateY: '100%' });
+
+    if(!mobileNavItems){
+      gsap.set(mobileNavItems, { translateY: '100%' });
+    };
 
     // Funzione per animare il menu
     function animateMenu(open: boolean) {
@@ -109,6 +111,7 @@ export function setupClientMobileNavigation() {
       })
       .to(mobileNav, {
         opacity: open ? 1 : 0,
+        top: open ? 'var(--header-height)' : '-100%',
         zIndex: open ? 11 : -1,
         duration: 0.4,
         ease: 'power2.inOut',
@@ -178,8 +181,7 @@ export function setupClientMobileNavigation() {
         isOpen = false;
       }
       updateOnBreakpoint(mediaQuery);
-    });
-  });
+    }); 
 }
 
 setupClientMobileNavigation();

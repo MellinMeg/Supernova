@@ -1,14 +1,28 @@
 ---
 // import "./HomeIntro.scss";
 import type { HomeIntroProps } from "./HomeIntro.ts";
+import Heading from "../Heading/Heading.astro";
 
 export interface Props extends HomeIntroProps {}
 
 const props: Props = Astro.props;
 ---
 
-<div class="HomeIntro"> 
-  sono la home intro
+<div class="HomeIntro">  
+    <div class="HomeIntro__Wrapper">
+        <div class="HomeIntro__Container">
+            <div class="HomeIntro__Top">
+                <Heading tag="h2" class="HomeIntro__Title Heading2">What<br />drives me</Heading>
+            </div>
+            <div class="HomeIntro__Paragraphs">
+                <p class="HomeIntro__Paragraph">Hi, i'm Meg! I am a Frontend Developer and I started my journey in Bologna since 2014. I have been developing websites, starting out as a web designer, but my desire to create increasingly beautiful things gradually materialized in coding development.</p>
+
+                <p class="HomeIntro__Paragraph">Today, I work as a CMS & Frontend Developer at Jump Group in Forlì, using HTML, SCSS, JS, TS & Laravel, and the Roots ecosystem. For me, learning never ends: I’m studying GSAP to apply it to the projects I develop at the agency and Three.js as well.</p>
+
+                <p class="HomeIntro__Paragraph">My workday always starts with checking out the AWWWARDS of the day; it's a “rule” I’ve set for myself to stay updated with trends, but mostly because it’s my daily dose of beauty, and I’m convinced that.</p>
+            </div>
+        </div>
+    </div> 
 </div>
 
 <script src="./HomeIntro.client.ts"></script>
