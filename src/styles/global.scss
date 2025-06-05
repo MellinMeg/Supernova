@@ -17,6 +17,7 @@
   --clr-white-30: rgba(255, 255, 255, 0.3);
 
   // clr-opacity 0.6
+  --clr-red-40: rgba(253, 104, 65, 0.4);
   --clr-red-60: rgba(253, 104, 65, 0.6);
   --clr-blue-60: rgba(25, 193, 229, 0.6);
   --clr-green-60: rgba(62, 220, 88, 0.6);
@@ -91,6 +92,7 @@
     25vw,
     var(--fs-1100)
   ); // 18 a 96px
+  --fs-talks: clamp(6rem, 25vw, 41rem); // 80 a 96px
   --fs-heading-404: clamp(var(--fs-950), 25vw, var(--fs-1100)); // 80 a 96px
   --fs-heading-1: clamp(
     var(--fs-700),
@@ -206,6 +208,7 @@ main {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
+  appearance: none;
 }
 
 *,

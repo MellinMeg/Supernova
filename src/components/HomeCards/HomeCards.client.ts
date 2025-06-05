@@ -13,6 +13,7 @@ export function setupClientHomeCards() {
     const cards = root.querySelectorAll('.CodeCard');
     const header = document.querySelectorAll('.Menu nav li a') as NodeListOf<HTMLElement>;
     const logo = document.querySelectorAll('.Logo__Wrapper svg path') as NodeListOf<HTMLElement>;
+    const quote = document.querySelectorAll('.HeaderQuotes__Quote') as NodeListOf<HTMLElement>;
 
     // ScrollTrigger per cambiare colore degli anchor quando l'header passa sopra HomeCards
     ScrollTrigger.create({
@@ -22,19 +23,23 @@ export function setupClientHomeCards() {
       onEnter: () => {
         header.forEach(el => el.style.color = 'var(--clr-blue-hard)');
         logo.forEach(el => el.style.fill = 'var(--clr-blue-hard)');
+        quote.forEach(el => el.style.color = 'var(--clr-blue-hard)');
       },
       onLeaveBack: () => {
         header.forEach(el => el.style.color = '');
         logo.forEach(el => el.style.fill = '');
+        quote.forEach(el => el.style.color = '');
       },
       // opzionale: se vuoi che torni normale anche quando esce dal fondo
       onLeave: () => {
         header.forEach(el => el.style.color = '');
         logo.forEach(el => el.style.fill = '');
+        quote.forEach(el => el.style.color = '');
       },
       onEnterBack: () => {
         header.forEach(el => el.style.color = 'var(--clr-blue-hard)');
         logo.forEach(el => el.style.fill = 'var(--clr-blue-hard)');
+        quote.forEach(el => el.style.color = 'var(--clr-blue-hard)');
       }
     });
 
@@ -136,37 +141,33 @@ export function setupClientHomeCards() {
 
 }
 
-setupClientHomeCards();
-
-ScrollTrigger.create({
-  trigger: '.HomeCards__Title',
-  start: 'top 80%',
-  once: true,
-  onEnter: () => {
-    splitText();
-  }
-});
-
-export function splitText() { 
-  let selectors = ['.HomeCards__Title', '.HomeCards__Description']
-  gsap.set(selectors, {opacity: 1});
-
-  selectors.forEach((selector) => {
-    const el = document.querySelector(selector);
-    if (!el) return;
-
-    const split = new SplitText(el, {
-      type: "lines",
-      lineClass: "line",
-      autoSplit: true,
-    });
-
-    gsap.from(split.lines, {
-      duration: 0.6,
-      yPercent: 100,
-      opacity: 0,
-      stagger: 0.05,
-      ease: "power2.out",
-    })
-  }); 
+export function splitTextHomeCards() { 
+  ScrollTrigger.create({
+    trigger: '.HomeCards__Title',
+    start: 'top 80%',
+    once: true,
+    onEnter: () => {
+      let selectors = ['.HomeCards__Title', '.HomeCards__Description']
+      gsap.set(selectors, {opacity: 1});
+    
+      selectors.forEach((selector) => {
+        const el = document.querySelector(selector);
+        if (!el) return;
+    
+        const split = new SplitText(el, {
+          type: "lines",
+          lineClass: "line",
+          autoSplit: true,
+        });
+    
+        gsap.from(split.lines, {
+          duration: 0.6,
+          yPercent: 100,
+          opacity: 0,
+          stagger: 0.05,
+          ease: "power2.out",
+        })
+      }); 
+    }
+  });
 }

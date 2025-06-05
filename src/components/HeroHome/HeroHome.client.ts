@@ -1,9 +1,11 @@
 import { gsap } from 'gsap';
 import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger);
 
 
-export function setupClientsplitText() { 
+export function setupClientHeroHome() { 
   let selectors = ['.HeroHome__Hi', '.HeroHome__Span', '.HeroHome__Title', '.HeroHome__FD']
   gsap.set(selectors, {opacity: 1});
 
@@ -27,7 +29,3 @@ export function setupClientsplitText() {
     })
   }); 
 }
-  
-document.fonts.ready.then(() => {
-  setupClientsplitText();
-});

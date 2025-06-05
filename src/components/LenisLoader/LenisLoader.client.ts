@@ -10,10 +10,9 @@ declare global {
 export function setupClientLenisLoader() {
   const lenis = new Lenis({
     duration: 1,
-    // easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -4 * t)), // https://easings.net
-    // direction: 'vertical',
     touchMultiplier: 2,
-    anchors: true
+    anchors: true,
+    autoRaf: true
   })
 
   window.lenis = lenis;
@@ -36,5 +35,3 @@ export function setupClientLenisLoader() {
   })
 
 }
-
-setupClientLenisLoader();

@@ -2,6 +2,7 @@
   display: none;
 
   @media (min-width: 1024px) {
+    color: var(--clr-white);
     position: relative;
     display: flex;
     overflow: hidden;

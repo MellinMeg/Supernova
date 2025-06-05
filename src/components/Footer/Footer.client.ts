@@ -79,5 +79,3 @@ export function setupClientFooter() {
   });
 
 }
-
-setupClientFooter();

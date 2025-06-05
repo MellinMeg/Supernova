@@ -1,0 +1,43 @@
+---
+import type { TalksProps } from "./Talks.ts";
+import Button from "../Button/Button.astro";
+import Heading from "../Heading/Heading.astro";
+
+export interface Props extends TalksProps {}
+
+const props: Props = Astro.props;
+---
+
+<div class="Talks">
+  <div class="Talks__Wrapper">
+    <div class="Talks__Marquee" data-text="Talks Talks Talks Talks Talks Talks Talks Talks Talks"> 
+    </div>
+    <div class="Talks__Cards">
+      <div class="Talks__Card">
+        <div class="Talks__Mask">
+          <div class="Talks__CardWrapper">
+            <div class="Talks__CardTitles">
+              <Heading tag="h3" class="Heading5">Emotional Web Design</Heading> 
+              <Heading tag="h4" class="Heading6">Bologna Frontend</Heading> 
+            </div>
+            <Button ariaLabel="link alla pagina del sito del slideshare con le slides del talk" href="https://www.slideshare.net/slideshow/emotional-web-design-trends-20182019/124236668" target="_blank" color="Red" showIcon={true}>Read it</Button>
+          </div>
+        </div>
+      </div>
+      <div class="Talks__Card">
+        <div class="Talks__Mask">
+          <div class="Talks__CardWrapper">
+            <div class="Talks__CardTitles">
+              <Heading tag="h3" class="Heading5">Why emotional websites matter</Heading> 
+              <Heading tag="h4" class="Heading6">Fevr</Heading>
+            </div>
+            <Button ariaLabel="link alla pagina del sito del fevr con il video del talk" href="https://www.fevr.it/eventi/2019/05/why-emotional-websites-matters/" color="Red" target="_blank" showIcon={true}>See it</Button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./Talks.client.ts"></script>

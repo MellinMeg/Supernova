@@ -1,5 +1,2 @@
-
 export function setupClientLogo() {
 }
-
-setupClientLogo();

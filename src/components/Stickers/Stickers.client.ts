@@ -2,8 +2,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-export function setupClientStickers() {
-  // document.addEventListener("DOMContentLoaded", () => {
+export function setupClientStickers() { 
     const stickersEl = document.querySelector('.Stickers') as HTMLElement;
     const wrapper = stickersEl.querySelector('.Stickers__Wrapper') as HTMLElement;
     const bg = stickersEl.querySelector('.Stickers__Bg') as HTMLElement;
@@ -65,14 +64,4 @@ export function setupClientStickers() {
           duration: 0.1,
         }, '-=0.4')
     }
-  // });
-  
 }
-
-setupClientStickers();
-
-window.addEventListener('load', () => {
-  // const stickersEl = document.querySelector('.Stickers') as HTMLElement;
-
-  setupClientStickers();
-});

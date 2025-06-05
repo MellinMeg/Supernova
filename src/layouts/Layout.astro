@@ -14,10 +14,11 @@ import LenisLoader from "../components/LenisLoader/LenisLoader.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-		<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<link href="https://api.fontshare.com/v2/css?f[]=melodrama@300,400,500,600,700,1&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=MuseoModerno:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+
 		<meta name="generator" content={Astro.generator} />
-		<title>Meg Supernova - Creative Developer</title>
+		<title>Meg Supernova - Frontend Developer</title>
 	</head>
 	<body>
 		<LenisLoader/>
@@ -26,5 +27,7 @@ import LenisLoader from "../components/LenisLoader/LenisLoader.astro";
 			<slot /> 
 		</main>
 		<Footer/>
+		
+		<script src="../scripts/app.js"></script>
 	</body>
 </html>

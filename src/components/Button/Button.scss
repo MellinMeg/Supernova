@@ -64,6 +64,9 @@
   &--Pink {
     @include button-variant(var(--clr-pink), var(--clr-white), var(--clr-pink));
   }
+  &--Red {
+    @include button-variant(var(--clr-red), var(--clr-white), var(--clr-red));
+  }
   &--Blue {
     @include button-variant(var(--clr-blue), var(--clr-white), var(--clr-blue));
   }

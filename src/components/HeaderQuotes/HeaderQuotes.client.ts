@@ -24,5 +24,3 @@ export function setupClientHeaderQuotes() {
   setInterval(nextSlide, 3000);
   }
 }
-
-setupClientHeaderQuotes();
